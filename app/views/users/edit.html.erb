@@ -1,0 +1,45 @@
+<h1>ユーザー情報の編集</h1>
+<%= form_for(@user) do |f| %>
+	<div class = "field">
+		<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
+		<%= f.attachment_field :profile_image %>
+	</div>
+
+	<div class = "field">
+		<%= f.text_area :introduction, :size=>"92", autofocus: true, autocomplete: "body" %>
+	</div>
+
+	<div class="field">
+    <%= f.label :氏名（漢字） %><br />
+    <%= f.text_field :kanji_name, autofocus: true, autocomplete: "kanji_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :氏名（カナ） %><br />
+    <%= f.text_field :kana_name, autofocus: true, autocomplete: "kana_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ユーザー名 %><br />
+    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+      <%= f.label :性別 %><br />
+      <%= f.select :sex, [["男性", "男性"], ["女性", "女性"]] ,class:"form-control" %>
+    </div>
+
+    <div class="field">
+    <%= f.label :身長 %><br />
+    <p><%= f.select :height, [["~150", "~150"], ["150~155", "150~155"], ["155~160", "155~160"], ["165~170", "165~170"], ["170~175", "170~175"], ["175~180", "175~180"], ["180~185", "180~185"], ["185~190", "185~190"], ["190~", "190~"]] ,class:"form-control" %>cm</p>
+  </div>
+
+	<div class = "field">
+		<%= f.submit "投稿する" %>
+	</div>
+<% end %>

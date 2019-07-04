@@ -1,0 +1,9 @@
+<h1>マイページ</h1>
+
+<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
+<%= @user.user_name %>
+
+<%= link_to "編集", edit_user_path(@user.id) %>
+
+
+アイテムを追加していく

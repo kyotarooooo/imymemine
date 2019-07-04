@@ -13,9 +13,10 @@
     <header>
       <h1><%= link_to "ImYmEmINE", root_path %></h1>
         <% if user_signed_in? %>
-          <%= link_to "一覧", coordinates_path %>
-          <%= link_to "投稿", new_coordinate_path %>
+          <%= link_to "コーディネート一覧", coordinates_path %>
+          <%= link_to "ユーザー一覧", users_path %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%= link_to "マイページ", mypage_path(current_user.id) %>
         <% elsif admin_signed_in? %>
           <h1>管理者ログイン中</h1>
           <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
