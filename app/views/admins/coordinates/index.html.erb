@@ -1,0 +1,8 @@
+<h1>管理者のコーディネート一覧</h1>
+
+<% @coordinates.each do |coordinate| %>
+	<%= link_to admins_coordinate_path(coordinate.id) do %>
+		<%= attachment_image_tag coordinate, :coordinate_image, :fill, 150, 150, format: 'jpeg' %>
+	<% end %>
+		<%= coordinate.user.user_name %>
+<% end %>

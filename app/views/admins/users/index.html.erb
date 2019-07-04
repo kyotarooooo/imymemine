@@ -1,0 +1,11 @@
+<h1>アドミンのユーザー一覧</h1>
+
+<% @user.each do |user| %>
+		<%= attachment_image_tag user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", size:'50x50', class: 'img-circle profile-thumb my-img edit-img' %>
+
+	<%= link_to admins_user_path(user.id) do %>
+		<%= user.user_name %>
+	<% end %>
+
+		<%= user.sex %>
+<% end %>

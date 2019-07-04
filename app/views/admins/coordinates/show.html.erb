@@ -1,0 +1,13 @@
+<h1>ユーザーコーディネート詳細</h1>
+
+<%= link_to user_path(@coordinate.user.id) do %>
+<%= attachment_image_tag @coordinate.user, :profile_image, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: 'img-circle profile-thumb my-img edit-img' %>
+<% end %>
+
+
+
+<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 300, 300, format: 'jpeg' %>
+<%= @coordinate.body %>
+
+
+<%= link_to "削除", admins_coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" %>

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-root "homes#about"
-get "users/:id/top/" => "users#top", as: "mypage"
-
+	root "homes#about"
+	get "users/:id/top/" => "users#top", as: "mypage"
 
 
 devise_for :admins, controllers: {
@@ -15,7 +14,13 @@ devise_for :users, controllers: {
   	passwords:     'users/passwords',
   	registrations: 'users/registrations'
 }
-resources :coordinates, only:[:new, :create, :index, :show, :edit, :update, :destroy]
-resources :users, only:[:index, :show, :edit, :update]
+	resources :coordinates, only:[:new, :create, :index, :show, :edit, :update, :destroy]
+	resources :users, only:[:index, :show, :edit, :update]
+
+namespace :admins do
+	resources :coordinates, only: [:index, :show, :destroy]
+    resources :users, only: [:index, :show]
+    get "/top" => "users#top", as: "admin_mypage"
+end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
