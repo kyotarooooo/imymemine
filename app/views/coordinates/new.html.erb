@@ -1,0 +1,16 @@
+<h1>コーディネートを投稿する</h1>
+
+<%= form_for(@coordinate) do |f| %>
+	<div class = "field">
+		<%= f.attachment_field :coordinate_image %>
+	</div>
+
+	<div class = "field">
+		<%= f.label :本文 %>
+		<%= f.text_area :body, :size=>"92", autofocus: true, autocomplete: "body" %>
+	</div>
+
+	<div class = "field">
+		<%= f.submit "投稿する" %>
+	</div>
+<% end %>

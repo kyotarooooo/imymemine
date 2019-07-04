@@ -1,0 +1,7 @@
+<h1>ユーザーコーディネート詳細</h1>
+
+<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 300, 300, format: 'jpeg' %>
+<%= @coordinate.body %>
+
+<%= link_to "編集", edit_coordinate_path(@coordinate.id) %>
+<%= link_to "削除", coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" %>

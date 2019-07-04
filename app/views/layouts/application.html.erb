@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Imymemine</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= link_to "ImYmEmINE", root_path %></h1>
+        <% if user_signed_in? %>
+          <%= link_to "一覧", coordinates_path %>
+          <%= link_to "投稿", new_coordinate_path %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <% elsif admin_signed_in? %>
+          <h1>管理者ログイン中</h1>
+          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "一覧", coordinates_path %>
+          <%= link_to "新規登録", new_user_registration_path %>
+          <%= link_to "ログイン", new_user_session_path %>
+        <% end %>
+    </header>
+    <%= yield %>
+    <!-- 後にページが下がっても一緒に動いてくる仕組みにしたい -->
+    <ul class="nav nav-pills nav-justified">
+      <li role="presentation"><a href="#">ホーム</a></li>
+      <li role="presentation"><a href="#">メニューＡ</a></li>
+      <li role="presentation"><a href="#">メニューＢ</a></li>
+    </ul>
+  </body>
+</html>
