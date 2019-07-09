@@ -1,6 +1,6 @@
 class CoordinatesController < ApplicationController
 
-  before_action :user_login_check, only: [:new, :edit, :show]
+  before_action :user_login_check, only: [:new, :create, :edit, :update, :show]
 
 
 

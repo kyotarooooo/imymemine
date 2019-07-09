@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  before_action :authenticate_user!
+
+
+
   def top
   	@user = current_user
     @coordinates = Coordinate.where(user_id: @user)
@@ -20,8 +25,12 @@ class UsersController < ApplicationController
 
   def update
   	@user = User.find(params[:id])
-  	@user.update(user_params)
-  	redirect_to user_path(@user.id)
+  	if @user.update(user_params)
+       flash[:notice] = "編集しました"
+  	   redirect_to user_path(@user.id)
+    else
+       render 'users/edit'
+    end
   end
 
 
