@@ -1,0 +1,1938 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190704091248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "kanji_name" varchar NOT NULL, "kana_name" varchar NOT NULL, "user_name" varchar NOT NULL, "sex" varchar NOT NULL, "height" varchar NOT NULL, "profile_image_id" text, "introduction" text, "resignation" boolean DEFAULT 0 NOT NULL, "resigned_at" datetime)[0m
+  ↳ db/migrate/20190704091248_devise_create_users.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190704091248_devise_create_users.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190704091248_devise_create_users.rb:49
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190704091248"]]
+  ↳ bin/rails:9
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateAdmins (20190704091300)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190704091300_devise_create_admins.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  ↳ db/migrate/20190704091300_devise_create_admins.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  ↳ db/migrate/20190704091300_devise_create_admins.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190704091300"]]
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCoordinates (20190704100118)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "coordinates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "item_id" integer, "coordinate_image_id" text NOT NULL, "body" text NOT NULL)[0m
+  ↳ db/migrate/20190704100118_create_coordinates.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190704100118"]]
+  ↳ bin/rails:9
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to RemoveBodyFromCoordinates (20190709091405)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acoordinates" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer DEFAULT NULL, "item_id" integer DEFAULT NULL, "coordinate_image_id" text NOT NULL, "body" text NOT NULL)[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "acoordinates" ("id","created_at","updated_at","user_id","item_id","coordinate_image_id","body")
+                     SELECT "id","created_at","updated_at","user_id","item_id","coordinate_image_id","body" FROM "coordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:3
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE "coordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "coordinates" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer DEFAULT NULL, "item_id" integer DEFAULT NULL, "coordinate_image_id" text NOT NULL)[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "coordinates" ("id","created_at","updated_at","user_id","item_id","coordinate_image_id")
+                     SELECT "id","created_at","updated_at","user_id","item_id","coordinate_image_id" FROM "acoordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "acoordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acoordinates" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer DEFAULT NULL, "item_id" integer DEFAULT NULL, "coordinate_image_id" text NOT NULL)[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acoordinates" ("id","created_at","updated_at","user_id","item_id","coordinate_image_id")
+                     SELECT "id","created_at","updated_at","user_id","item_id","coordinate_image_id" FROM "coordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "coordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "coordinates" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer DEFAULT NULL, "item_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "coordinates" ("id","created_at","updated_at","user_id","item_id")
+                     SELECT "id","created_at","updated_at","user_id","item_id" FROM "acoordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "acoordinates"[0m
+  ↳ db/migrate/20190709091405_remove_body_from_coordinates.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190709091405"]]
+  ↳ bin/rails:9
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (13.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-09 09:14:58.842906"], ["updated_at", "2019-07-09 09:14:58.842906"]]
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddBodyToCoordinates (20190709091541)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (12.5ms)[0m  [1m[35mALTER TABLE "coordinates" ADD "body" text[0m
+  ↳ db/migrate/20190709091541_add_body_to_coordinates.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "coordinates" ADD "coordinate_image_id" text[0m
+  ↳ db/migrate/20190709091541_add_body_to_coordinates.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190709091541"]]
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (5.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-07-09 09:23:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (1.7ms)
+  Rendered users/shared/_links.html.erb (3.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (646.6ms)
+Completed 200 OK in 29156ms (Views: 29028.4ms | ActiveRecord: 22.7ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-07-09 09:24:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"56N3phhwHjtbIeOxa4TOPvsY9NUL1l6fTFG8V/nCSw4z+VpywMM0dKMUfpWM/yw1asuwkA8gGVGHKaZ5p5e4yA==", "user"=>{"kanji_name"=>"山田一郎", "kana_name"=>"ヤマダイチロウ", "user_name"=>"やま", "email"=>"qqq@qqq.com", "sex"=>"男性", "height"=>"~150", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (4.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqq@qqq.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (17.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "kanji_name", "kana_name", "user_name", "sex", "height") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "qqq@qqq.com"], ["encrypted_password", "$2a$11$MQZGMjo1ENnPl6t4uFtKeOce1El1r.dTyUBCgDafeM0NTXwWYgtHe"], ["created_at", "2019-07-09 09:24:47.326428"], ["updated_at", "2019-07-09 09:24:47.326428"], ["kanji_name", "山田一郎"], ["kana_name", "ヤマダイチロウ"], ["user_name", "やま"], ["sex", "男性"], ["height", "~150"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 685ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-09 09:24:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1343ms (Views: 1264.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:24:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 1310ms (Views: 1221.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:25:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 1442ms (Views: 1351.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:26:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (39.9ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1499ms (Views: 1349.5ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:26:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TT7fmVC6n4SYYrQ3l86Cd0d5mqSGVL1yQw/JgLaSXYP6/SJgv9pWRpPO3t4GLjwts/f/lvda7TPZZV7BG+ME1A==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f746b218b30 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2293-1pkzns5.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mCoordinate Create (26.4ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-09 09:26:15.100802"], ["updated_at", "2019-07-09 09:26:15.100802"], ["user_id", 1], ["body", "ああああああああああああああああああああああ"], ["coordinate_image_id", "70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092"]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 134ms (ActiveRecord: 44.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-09 09:26:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1511ms (Views: 1413.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 09:26:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1307ms (Views: 1221.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/attachments/359ace00ab5da3417575bc176318efc9fc578c4a/store/fill/150/150/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 09:26:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 09:26:26 +0000] GET "/359ace00ab5da3417575bc176318efc9fc578c4a/store/fill/150/150/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 837.7ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 09:27:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (51.3ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 5078ms (Views: 4902.8ms | ActiveRecord: 40.8ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:27:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 1436ms (Views: 1339.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:27:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (88.5ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1462ms (Views: 1377.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:27:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hoFdssTJ+Oai3Py08QR0fnHdlnWUtHu38jZTS0pjRVgxQqBLK6kxJKlwll1g5MokhVPzR+W6K/ZoXMQK5xIcDw==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d666885f0 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2352-1x6v8s7.jpg>, @original_filename="テニス足元.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE8\xB6\xB3\xE5\x85\x83.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"いいいいいいいいいいいいいいいいいいい"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mCoordinate Create (10.3ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-09 09:27:34.705999"], ["updated_at", "2019-07-09 09:27:34.705999"], ["user_id", 1], ["body", "いいいいいいいいいいいいいいいいいいい"], ["coordinate_image_id", "d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810"]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+Redirected to http://localhost:3000/users/1/top
+Completed 302 Found in 115ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:27:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 1471ms (Views: 1385.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:30:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (2903.8ms)
+Completed 200 OK in 5657ms (Views: 5436.0ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:30:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (48.3ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1386ms (Views: 1249.6ms | ActiveRecord: 18.1ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:30:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zabMx8rYGMkT2sEu7kxy2BtmCVMF2Sdy9hI92z4jAVF6ZTE+JbjRCxh2q8d/rMyC7+hsYXTXdzNseKqak1JYBg==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 10.2ms)
+
+
+  
+ActionView::MissingTemplate (Missing template /new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/imymemine/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+  
+app/controllers/coordinates_controller.rb:17:in `create'
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:31:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zabMx8rYGMkT2sEu7kxy2BtmCVMF2Sdy9hI92z4jAVF6ZTE+JbjRCxh2q8d/rMyC7+hsYXTXdzNseKqak1JYBg==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 5775ms (Views: 5541.1ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 09:36:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1414ms (Views: 1333.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/attachments/9ec9538e766f2b9b72aedea6a4a0c9248a010844/store/fill/150/150/d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 09:36:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 09:36:12 +0000] GET "/9ec9538e766f2b9b72aedea6a4a0c9248a010844/store/fill/150/150/d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810/coordinate_image.jpeg" 200 229.6ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:36:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 1372ms (Views: 1289.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:36:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1537ms (Views: 1437.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:36:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sasnT28A+zzMhjMZqVYaYWH0weO1ETf2Bsxn7BPY364GaNq2gGAy/scqWfA4tqQ7lXqk0cQfZ7ecpvCtvqmG+Q==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (100.8ms)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 9.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_massages' for #<ActiveModel::Errors:0x00007f73e8482b88>):
+     6: <% if @coordinate.errors.any? %>
+     7: 	<div id = "error_explanation" class = "alert alert-danger">
+     8: 		<ul>
+     9: 			<% @coordinate.errors.full_massages.each do |message| %>
+    10: 				<li><%= massage %></li>
+    11: 			<% end %>
+    12: 		</ul>
+  
+app/views/coordinates/new.html.erb:9:in `block in _app_views_coordinates_new_html_erb__2467585230475056039_70067897463500'
+app/views/coordinates/new.html.erb:4:in `_app_views_coordinates_new_html_erb__2467585230475056039_70067897463500'
+app/controllers/coordinates_controller.rb:17:in `create'
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 09:39:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1389ms (Views: 1306.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:39:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 1532ms (Views: 1434.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:39:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1462ms (Views: 1380.3ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:39:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3FeRXN8NlYK5hSg2eAGs7NFgxVXVnIo+DxeEnYtmfVRrlGylMG1cQLIpQt/p4RK2Je6gZ6SS2n+VfRPcJhckAw==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (95.8ms)
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 9.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_massages' for #<ActiveModel::Errors:0x00007f73e817c920>):
+    3: <% if @coordinate.errors.any? %>
+    4: 	<div id = "error_explanation" class = "alert alert-danger">
+    5: 		<ul>
+    6: 			<% @coordinate.errors.full_massages.each do |message| %>
+    7: 				<li><%= massage %></li>
+    8: 			<% end %>
+    9: 		</ul>
+  
+app/views/coordinates/new.html.erb:6:in `_app_views_coordinates_new_html_erb__2467585230475056039_70067895819680'
+app/controllers/coordinates_controller.rb:17:in `create'
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 09:40:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3FeRXN8NlYK5hSg2eAGs7NFgxVXVnIo+DxeEnYtmfVRrlGylMG1cQLIpQt/p4RK2Je6gZ6SS2n+VfRPcJhckAw==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:13
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 1292ms (Views: 1267.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 09:52:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (55.3ms)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 5100ms (Views: 4941.2ms | ActiveRecord: 41.6ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-07-09 09:52:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yLVsAde11MyZ2R+TFNujKBBHPvc+EVnpl541ffsnyu8c70HVDwb+g2HsgrfzoEEjgZR6sjrnHidc5i9TpXI5KQ=="}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 96ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 09:52:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (4.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (228.1ms)
+Completed 200 OK in 1574ms (Views: 1558.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:53:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_signed_id?' for #<CoordinatesController:0x00007f48c5138e58>):
+  
+app/controllers/application_controller.rb:12:in `user_login_check'
+Started GET "/coordinates/index" for 10.0.2.2 at 2019-07-09 09:53:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_signed_id?' for #<CoordinatesController:0x00007f48c66eae18>):
+  
+app/controllers/application_controller.rb:12:in `user_login_check'
+Started GET "/coordinates/index" for 10.0.2.2 at 2019-07-09 09:54:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `new_user_session_psth' for #<CoordinatesController:0x00007fb550360a58>):
+  
+app/controllers/application_controller.rb:13:in `user_login_check'
+Started GET "/coordinates/index" for 10.0.2.2 at 2019-07-09 09:54:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"index"}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :user_login_check rendered or redirected
+Completed 302 Found in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 09:54:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (161.2ms)
+Completed 200 OK in 5771ms (Views: 5686.3ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/users/index" for 10.0.2.2 at 2019-07-09 09:55:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 404 Not Found in 13ms (ActiveRecord: 5.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=index):
+  
+app/controllers/users_controller.rb:12:in `show'
+Started GET "/coodinates/index" for 10.0.2.2 at 2019-07-09 09:55:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/coodinates/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/coordinates/index" for 10.0.2.2 at 2019-07-09 09:55:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"index"}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :user_login_check rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 09:55:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 1709ms (Views: 1706.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 09:57:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 5634ms (Views: 5465.1ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/coordinates/" for 10.0.2.2 at 2019-07-09 09:57:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 1322ms (Views: 1243.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/coordinates/" for 10.0.2.2 at 2019-07-09 09:57:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 1397ms (Views: 1314.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-09 09:57:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :user_login_check rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 09:57:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (189.9ms)
+Completed 200 OK in 1889ms (Views: 1767.7ms | ActiveRecord: 17.9ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-09 09:58:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vvtRV0GEeqQlbwCNubt3FMVVx3VUebMq1IvB4WP4RiAXAY87sQDdcHjMbzV+As7zmO/92RnOxlyMDlYIigojWA==", "user"=>{"email"=>"qqq@qqq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vvtRV0GEeqQlbwCNubt3FMVVx3VUebMq1IvB4WP4RiAXAY87sQDdcHjMbzV+As7zmO/92RnOxlyMDlYIigojWA==", "user"=>{"email"=>"qqq@qqq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 1490ms (Views: 1485.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-09 09:58:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rfd/2eS9g7F7epqgtYBpVP+HfMdL+TK6MBuuzC+gxlcEDaG1FDkkZSbZ9RhyOdCzoj1GawZOR8xonjklxlKjLw==", "user"=>{"email"=>"qqq@qqq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqq@qqq.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 692ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-09 09:58:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1329ms (Views: 1243.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:58:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 1566ms (Views: 1463.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 09:58:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 1374ms (Views: 1281.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 09:58:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 1373ms (Views: 1286.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-09 09:58:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (53.2ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1428ms (Views: 1334.3ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:04:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (3000.3ms)
+Completed 500 Internal Server Error in 3523ms (ActiveRecord: 51.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `profile_image' for #<Coordinate:0x0000556347840260>):
+    10: </br>
+    11: 
+    12: <% @coordinates.each do |coordinate| %>
+    13: 	<%= attachment_image_tag coordinate, :profile_image, :fill, 200, 200, format: 'jpeg' %>
+    14: <% end %>
+  
+app/views/users/top.html.erb:13:in `block in _app_views_users_top_html_erb___1912198131420479863_69937337652260'
+app/views/users/top.html.erb:12:in `_app_views_users_top_html_erb___1912198131420479863_69937337652260'
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:04:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 3071ms (Views: 2882.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/attachments/efcd524216847eee2cb23eeba4a132ae2ca18a96/store/fill/200/200/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:04:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/1eee346188a9bf826b345bbf302d6452fd0ceed3/store/fill/200/200/d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:04:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 10:04:51 +0000] GET "/1eee346188a9bf826b345bbf302d6452fd0ceed3/store/fill/200/200/d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810/coordinate_image.jpeg" 200 265.5ms
+
+Refile::App: [2019-07-09 10:04:51 +0000] GET "/efcd524216847eee2cb23eeba4a132ae2ca18a96/store/fill/200/200/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 355.0ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:07:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.2ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (3298.6ms)
+Completed 500 Internal Server Error in 3806ms (ActiveRecord: 45.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `coordinates' for #<#<Class:0x0000559a796a3588>:0x00007f176855b870>):
+    10: </br>
+    11: 
+    12: <% @coordinates.each do |coordinate| %>
+    13: 	<% link_to coordinate_path(coordinates) do %>
+    14: 		<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 200, format: 'jpeg' %>
+    15: 	<% end %>
+    16: <% end %>
+  
+app/views/users/top.html.erb:13:in `block in _app_views_users_top_html_erb___2826079800012906240_69869255696800'
+app/views/users/top.html.erb:12:in `_app_views_users_top_html_erb___2826079800012906240_69869255696800'
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:07:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 2557ms (Views: 2438.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:08:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.2ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (3044.6ms)
+Completed 200 OK in 5901ms (Views: 5648.2ms | ActiveRecord: 47.6ms)
+
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-09 10:08:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (135.2ms)
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1714ms (Views: 1605.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:08:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 1634ms (Views: 1527.3ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:08:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmg52nn2uyyR++qXukhGfOFl0/Zh67MBHFlGPmZBgZ2WJZBk7kb5Z+fCDa8fKnfvzsHSw5lnSrA1T+/ipO9dkg==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff9de124d48 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2592-y7mybq.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1534ms (Views: 1401.3ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:08:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cBsZ8mxHfky8Hg0NXrg7B+Le5q/zcDLgm29dp9KlhCfSdEAxx1Ub8fFSYnqOaL3AyWjgA8he3fX39vNu5837dw==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff9dcb7dc38 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2592-1esby3a.jpg>, @original_filename="テニス足元.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE8\xB6\xB3\xE5\x85\x83.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1499ms (Views: 1459.8ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:09:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xA5jzV4yfckVuinc5HdoPOEs1iGsh4jwUujs67bLqN1mYToO9SAYdFj2Rqs0p+77yprQjZepZ+U+cUIig6PXjQ==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff9de13c178 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2592-1xueh3f.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ううううううううううううう"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1477ms (Views: 1438.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:12:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 1591ms (Views: 1487.0ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:13:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 1331ms (Views: 1246.4ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:13:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wd2Rh2mGnL5K6kWlIIbuopRdm8Qd3eOddzj6K6XOoqHZkDg5/jbe9TzTop2F5N8xu/ma8eVRGixeLlP3Z2B+rg==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff9dd315cc0 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2592-12hna6u.jpg>, @original_filename="ラケットとボール.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\xA9\xE3\x82\xB1\xE3\x83\x83\xE3\x83\x88\xE3\x81\xA8\xE3\x83\x9C\xE3\x83\xBC\xE3\x83\xAB.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"うううううううううううううううううう"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1438ms (Views: 1388.7ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-07-09 10:14:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6NIBwXievKcEpjA8TuYM2Bn7RHlGWAYNB7ps5VQDu9hKvVgC04zZGknqX0ueNoofMk1C1X126RhrI8IsYWvEiA=="}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 27ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 10:14:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (111.6ms)
+Completed 200 OK in 1640ms (Views: 1624.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-09 10:14:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2OazIZKmu5wcGGlfQ7EaqkCHSgB67xHx2kpWD+YM0PkdL9dBAgqnFeGa8kuqUbQ0RL4io6CU3RpwyGXWYdIrQA==", "user"=>{"email"=>"qqq@qqq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqq@qqq.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 531ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-09 10:14:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1383ms (Views: 1297.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:14:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1570ms (Views: 1468.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:14:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 1627ms (Views: 1515.1ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:14:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 1543ms (Views: 1433.1ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:15:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hwuKyIYB/aT2ZgkR0KAyyHo4MWOLHo3ubi9dH82Jqqoq+J/qj38PTRt3Q2FU5kkiOiHENF0TAi24LttZnZRIXA==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff9dcb1d9f0 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2592-147fvc.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"いいいいいいいいいいいいいいいいいい"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1476ms (Views: 1430.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:20:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1734ms (Views: 1584.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:20:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 1560ms (Views: 1454.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:20:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1309ms (Views: 1224.2ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:20:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PdpD93XS1QabUrcs1SR228HE5AvTdatZUmiC4QesvC+QKVbVfKwn73ZD/VxRYg0xgd0RXAV4JJqEaQSnV7Fe2Q==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff9dd2fc888 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2592-1duem74.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ええええええええええええええええええええええ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1480ms (Views: 1440.5ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:28:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ufb70zR1qT4q1rjK/tPl33O4taMc1fbQxjkZo438meTHSnbE2wQQgP2lef/OQAnNLMphXJBNVXrCkccFHlpe/A==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00005643ca30ddb0 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2617-zq1v15.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ええええええええええええええええええええええ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mCoordinate Create (51.4ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-09 10:28:15.587860"], ["updated_at", "2019-07-09 10:28:15.587860"], ["user_id", 1], ["body", "ええええええええええええええええええええええ"], ["coordinate_image_id", "11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e"]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+Redirected to http://localhost:3000/users/1/top
+Completed 302 Found in 334ms (ActiveRecord: 112.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:28:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:12
+  Rendered users/top.html.erb within layouts/application (2808.6ms)
+Completed 200 OK in 5048ms (Views: 4950.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/attachments/dc9823c0c0fc99843e714b7b78363af4f727a740/store/fill/200/200/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:28:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 10:28:20 +0000] GET "/dc9823c0c0fc99843e714b7b78363af4f727a740/store/fill/200/200/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 154.2ms
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:28:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 1339ms (Views: 1251.4ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:28:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h40NP8LAfVVmriqcJiNQMqcsF6kX0vJmSHs/Iho3KmMqfhgdy76PvIu/YOyiZSvY5zXi/sHffaWeerlkSirIlQ==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 1420ms (Views: 1385.1ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:29:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4SRDTISxo3dP6eGPzCsqCBSBdWY2+6vccQu3rgvnDhV3mM5ba8AayZiaILr8uMYaS/OhmbpjCHZ1o2kImEHJDQ==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f0004a6ac60 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2646-1lvvv3g.jpg>, @original_filename="ハワイのテニスコート.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x8F\xE3\x83\xAF\xE3\x82\xA4\xE3\x81\xAE\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x82\xB3\xE3\x83\xBC\xE3\x83\x88.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 5271ms (Views: 4955.7ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:30:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (55.0ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 5466ms (Views: 5256.3ms | ActiveRecord: 87.5ms)
+
+
+Started GET "/attachments/ff9328f07f5f27f1021fe146eb478f32747e0fe1/store/fill/150/150/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:30:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 10:30:58 +0000] GET "/ff9328f07f5f27f1021fe146eb478f32747e0fe1/store/fill/150/150/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 152.6ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:31:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 1589ms (Views: 1494.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:31:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (85.5ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1705ms (Views: 1615.3ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:31:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YEX4t016lbsLw//6/nDalNMO6XaJ68363RLSCE2oinfNtu2VRARnUubStYp6NqF+kxccIV/mQjkLE1ROHbVogQ==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f648a67fb10 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2666-4vrqt3.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 1486ms (Views: 1427.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:36:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1581ms (Views: 1476.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:36:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 1558ms (Views: 1469.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:36:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1440ms (Views: 1336.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:36:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QZRCQt0vftWbK8+1rbBm5ZhyjH/gvs36QB/Hs8wwcQbsZ1dg1FGMPHY6hcUp9h0P2Gt5KDazQjmWHkH1nC2T8A==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f649002fd40 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2666-95z5dg.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"あいうえお"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1485ms (Views: 1442.4ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:38:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (57.7ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 4914ms (Views: 4749.7ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:38:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 1409ms (Views: 1307.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:38:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (85.2ms)
+Completed 200 OK in 1585ms (Views: 1491.0ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:39:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g2FHwBPdfreoP82cHwybfmqDTt4xt8T2z4E8spCz8x0uklLiGqOMXkUuh+ybSuCUKpq7iee6SzUZgLr0wK4R6w==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe45a600158 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2696-3hme3b.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"aaaaaaaaaaaaaaaaaaaaaa"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 1214ms (Views: 1157.2ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:43:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gm/9DDeyVBXSXlHtANiegw29tnzIt1b7ShqyGkCGl2wU03Ab2MPtqwUtkNgwS3KRUs9ig0Qv9VFOsmy80yBQdA==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6db852bf48 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2717-1qqho8y.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"aaaaaaaaaaaaaaaaaaaaaa"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 5688ms (Views: 5397.4ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:45:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (57.7ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 5946ms (Views: 5765.0ms | ActiveRecord: 47.8ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:45:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 1518ms (Views: 1428.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:45:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (88.2ms)
+Completed 200 OK in 1716ms (Views: 1612.4ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:45:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YQXsqRc4mUnrzTtJ7XkFTZ6kCrW0R8nqYBE+Kov70hjM9vmLHkZroAbccTlpP36n3r3/4mJKRim2ELhs2+Yw7g==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb67e5877d0 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2737-6zce3l.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mCoordinate Create (10.5ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-09 10:45:56.983857"], ["updated_at", "2019-07-09 10:45:56.983857"], ["user_id", 1], ["body", "ああああああああああああああああああ"], ["coordinate_image_id", "6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca"]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+Redirected to http://localhost:3000/users/1/top
+Completed 302 Found in 117ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:45:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 1350ms (Views: 1252.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-09 10:46:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1522ms (Views: 1423.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/attachments/ae283c6130a9148fff1423b1ef3f18fc6f416f1a/store/fill/150/150/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:46:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 10:46:07 +0000] GET "/ae283c6130a9148fff1423b1ef3f18fc6f416f1a/store/fill/150/150/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 260.7ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:47:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (48.2ms)
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-09 10:47:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 1929ms (Views: 1824.0ms | ActiveRecord: 6.7ms)
+
+
+Completed 200 OK in 1430ms (Views: 1327.3ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:47:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z06udPeVbUKyvFfxH1CVcTIBAKJ+LZnLKPHMKkBD9q9ivbtW/uufq1+tHYGbFu6bchj19aggFgj+8EpsEF4UWQ==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 1302ms (Views: 1257.4ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-09 10:48:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"suJ1GMIimzL46tgQTojwZMRCcQxQYym7DaWxSWUNzuAkXvgPLVMijC+ZGSV+Gxx2mzCl89z7ihEJDW/v9qsJ+A==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb67d7fdfd8 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2737-31krdl.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"aaaaaaaaaaaaaaaaaaaaaaa"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mCoordinate Create (13.0ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-09 10:48:01.590324"], ["updated_at", "2019-07-09 10:48:01.590324"], ["user_id", 1], ["body", "aaaaaaaaaaaaaaaaaaaaaaa"], ["coordinate_image_id", "610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71"]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+Redirected to http://localhost:3000/users/1/top
+Completed 302 Found in 100ms (ActiveRecord: 33.3ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:48:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 1331ms (Views: 1241.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:52:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:9
+  Rendered users/top.html.erb within layouts/application (3098.0ms)
+Completed 200 OK in 5746ms (Views: 5479.8ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/attachments/4ddf5590c0b303c94417abf62a07db9b8cc0d474/store/fill/200/200/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:53:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/9f613bdbb784c72b34843d76c566238a92760077/store/fill/200/200/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 10:53:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 10:53:00 +0000] GET "/4ddf5590c0b303c94417abf62a07db9b8cc0d474/store/fill/200/200/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 219.7ms
+
+Refile::App: [2019-07-09 10:53:00 +0000] GET "/9f613bdbb784c72b34843d76c566238a92760077/store/fill/200/200/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" 200 185.1ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-09 10:53:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:11
+  Rendered users/top.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 1680ms (Views: 1567.8ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-09 11:02:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (89.7ms)
+Completed 200 OK in 1526ms (Views: 1420.8ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/attachments/5f64abc8265607c98de27b88bd329e4a9511f051/store/fill/300/300/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 11:02:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 11:02:33 +0000] GET "/5f64abc8265607c98de27b88bd329e4a9511f051/store/fill/300/300/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 154.8ms
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:02:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 1658ms (Views: 1536.4ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/attachments/1f9836bb8ac330e8fd7dde5814bac3b04357f5d6/store/fill/300/300/d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 11:02:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 11:02:38 +0000] GET "/1f9836bb8ac330e8fd7dde5814bac3b04357f5d6/store/fill/300/300/d82d3e006880b35d5e13697cfc8ffc5c92677b9259d6dd7e27b5861ae810/coordinate_image.jpeg" 200 153.4ms
+
+Started GET "/coordinates/3" for 10.0.2.2 at 2019-07-09 11:02:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (6.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (63.8ms)
+Completed 200 OK in 1682ms (Views: 1562.2ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/attachments/08c7a0672d9be17c9d30aa52f2daf464e9788456/store/fill/300/300/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 11:02:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 11:02:44 +0000] GET "/08c7a0672d9be17c9d30aa52f2daf464e9788456/store/fill/300/300/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 145.0ms
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:03:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (6.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  Rendered coordinates/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1569ms (Views: 1453.4ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:03:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (5.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  Rendered coordinates/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1568ms (Views: 1450.5ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/coordinates/2/edit" for 10.0.2.2 at 2019-07-09 11:04:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (4.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (183.7ms)
+Completed 200 OK in 1707ms (Views: 1595.6ms | ActiveRecord: 8.7ms)
+
+
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:05:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VPWM/S3dA2Y7486Mh0YFsplDHppgecwAl0OATiVrMsaThnQ32GkIK2Z0qGSOkKIrIVoGJgGnCXKlhtGiLo+zqg==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fc0a8542e30 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2833-h35sj9.jpg>, @original_filename="テニスのウェア.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE3\x81\xAE\xE3\x82\xA6\xE3\x82\xA7\xE3\x82\xA2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"編集"}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mCoordinate Update (19.5ms)[0m  [1m[33mUPDATE "coordinates" SET "coordinate_image_id" = ?, "body" = ?, "updated_at" = ? WHERE "coordinates"."id" = ?[0m  [["coordinate_image_id", "c3539824daedb14825e307ff3a00c106870d5391fe7431d5dcb2f23d3668"], ["body", "編集"], ["updated_at", "2019-07-09 11:05:53.775869"], ["id", 2]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Redirected to http://localhost:3000/coordinates/2
+Completed 302 Found in 309ms (ActiveRecord: 85.2ms)
+
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:05:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (2909.3ms)
+Completed 200 OK in 5290ms (Views: 5193.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/attachments/e2b1641745276f330fceb57b98102b82f5c5b151/store/fill/300/300/c3539824daedb14825e307ff3a00c106870d5391fe7431d5dcb2f23d3668/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 11:05:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 11:05:59 +0000] GET "/e2b1641745276f330fceb57b98102b82f5c5b151/store/fill/300/300/c3539824daedb14825e307ff3a00c106870d5391fe7431d5dcb2f23d3668/coordinate_image.jpeg" 200 174.4ms
+
+Started GET "/coordinates/2/edit" for 10.0.2.2 at 2019-07-09 11:06:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (5.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (193.0ms)
+Completed 200 OK in 1762ms (Views: 1640.4ms | ActiveRecord: 12.1ms)
+
+
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:06:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZTMKxiZPDMWQCkL54ISwP4zy6m1KtZ01HVYdvvGeUiqiQPIM0/sHiM2dJBHpUhemNOvy0StrWEcvk0xS+nrTRg==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fc0a002ebe0 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2833-13a3o8z.jpg>, @original_filename="ラケットとボール.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\xA9\xE3\x82\xB1\xE3\x83\x83\xE3\x83\x88\xE3\x81\xA8\xE3\x83\x9C\xE3\x83\xBC\xE3\x83\xAB.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐ"}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 12.8ms)
+
+
+  
+Errno::ETXTBSY (Text file busy @ apply2files - /vagrant/imymemine/tmp/uploads/store/c3539824daedb14825e307ff3a00c106870d5391fe7431d5dcb2f23d3668):
+  
+app/controllers/coordinates_controller.rb:37:in `update'
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:06:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sBvozai/TLW99JJeNXlcGajcm0D1PxvkMSAUE0JboA0mp2XaR871C2qHU2sF6rAL965Pv3mnuE41iMq10f1nFQ==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fc0aa1bdad8 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2833-16wyk3y.jpg>, @original_filename="ラケットとボール.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\xA9\xE3\x82\xB1\xE3\x83\x83\xE3\x83\x88\xE3\x81\xA8\xE3\x83\x9C\xE3\x83\xBC\xE3\x83\xAB.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああああああああああああああああああああ"}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (4.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mCoordinate Update (12.4ms)[0m  [1m[33mUPDATE "coordinates" SET "coordinate_image_id" = ?, "body" = ?, "updated_at" = ? WHERE "coordinates"."id" = ?[0m  [["coordinate_image_id", "9c38d1256be0355ef2f540ba05b262a7002eff030d74454828eb5cac3849"], ["body", "ああああああああああああああああああああああああああああああ"], ["updated_at", "2019-07-09 11:06:55.979414"], ["id", 2]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Redirected to http://localhost:3000/coordinates/2
+Completed 302 Found in 127ms (ActiveRecord: 39.7ms)
+
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:06:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 1425ms (Views: 1319.2ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/attachments/9a274447488a2e527c3c667fe719ac08f52d7d66/store/fill/300/300/9c38d1256be0355ef2f540ba05b262a7002eff030d74454828eb5cac3849/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 11:06:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 11:06:57 +0000] GET "/9a274447488a2e527c3c667fe719ac08f52d7d66/store/fill/300/300/9c38d1256be0355ef2f540ba05b262a7002eff030d74454828eb5cac3849/coordinate_image.jpeg" 200 173.5ms
+
+Started GET "/coordinates/2/edit" for 10.0.2.2 at 2019-07-09 11:07:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1556ms (Views: 1447.8ms | ActiveRecord: 8.4ms)
+
+
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:07:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w7vjUBRTmYRRYN3wdAjL4YyV9QJnoLltOUiLTT3XrngEyBua4eeSyQz3uxh93mx4NIztvgZ+fB8LjdqhNjMvFA==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fc0a046dc10 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2833-vb6u6n.jpg>, @original_filename="アパレル店内（アクセサリーに使用）.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x82\xA2\xE3\x83\x91\xE3\x83\xAC\xE3\x83\xAB\xE5\xBA\x97\xE5\x86\x85\xEF\xBC\x88\xE3\x82\xA2\xE3\x82\xAF\xE3\x82\xBB\xE3\x82\xB5\xE3\x83\xAA\xE3\x83\xBC\xE3\x81\xAB\xE4\xBD\xBF\xE7\x94\xA8\xEF\xBC\x89.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐｐ"}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 12.9ms)
+
+
+  
+Errno::ETXTBSY (Text file busy @ apply2files - /vagrant/imymemine/tmp/uploads/store/9c38d1256be0355ef2f540ba05b262a7002eff030d74454828eb5cac3849):
+  
+app/controllers/coordinates_controller.rb:37:in `update'
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:08:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kmdmUmeGFWwhLsoBaxCY5Hn7H6C2oVSVpRsuyoW7gm0E2+tFiPes0vZdCzRbg3T2JonLXzo59z+hs/BsFh1FdQ==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fc0a9b528d8 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2833-io9ktg.jpg>, @original_filename="アパレル店内（アクセサリーに使用）.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x82\xA2\xE3\x83\x91\xE3\x83\xAC\xE3\x83\xAB\xE5\xBA\x97\xE5\x86\x85\xEF\xBC\x88\xE3\x82\xA2\xE3\x82\xAF\xE3\x82\xBB\xE3\x82\xB5\xE3\x83\xAA\xE3\x83\xBC\xE3\x81\xAB\xE4\xBD\xBF\xE7\x94\xA8\xEF\xBC\x89.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああ"}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 13.2ms)
+
+
+  
+Errno::ETXTBSY (Text file busy @ apply2files - /vagrant/imymemine/tmp/uploads/store/9c38d1256be0355ef2f540ba05b262a7002eff030d74454828eb5cac3849):
+  
+app/controllers/coordinates_controller.rb:37:in `update'
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:08:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kmdmUmeGFWwhLsoBaxCY5Hn7H6C2oVSVpRsuyoW7gm0E2+tFiPes0vZdCzRbg3T2JonLXzo59z+hs/BsFh1FdQ==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fc0b435a698 @tempfile=#<Tempfile:/tmp/RackMultipart20190709-2833-1ygiamk.jpg>, @original_filename="アパレル店内（アクセサリーに使用）.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x82\xA2\xE3\x83\x91\xE3\x83\xAC\xE3\x83\xAB\xE5\xBA\x97\xE5\x86\x85\xEF\xBC\x88\xE3\x82\xA2\xE3\x82\xAF\xE3\x82\xBB\xE3\x82\xB5\xE3\x83\xAA\xE3\x83\xBC\xE3\x81\xAB\xE4\xBD\xBF\xE7\x94\xA8\xEF\xBC\x89.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"ああああああああああああ"}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mCoordinate Update (28.5ms)[0m  [1m[33mUPDATE "coordinates" SET "coordinate_image_id" = ?, "body" = ?, "updated_at" = ? WHERE "coordinates"."id" = ?[0m  [["coordinate_image_id", "f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154"], ["body", "ああああああああああああ"], ["updated_at", "2019-07-09 11:08:39.224421"], ["id", 2]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Redirected to http://localhost:3000/coordinates/2
+Completed 302 Found in 134ms (ActiveRecord: 55.6ms)
+
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:08:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 1343ms (Views: 1239.7ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/attachments/baccaf9e1298837088b0bf96573cd8011b35dbe0/store/fill/300/300/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-09 11:08:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-09 11:08:40 +0000] GET "/baccaf9e1298837088b0bf96573cd8011b35dbe0/store/fill/300/300/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" 200 179.5ms
+
+Started GET "/coordinates/2/edit" for 10.0.2.2 at 2019-07-09 11:08:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 1538ms (Views: 1426.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/coordinates/2/edit" for 10.0.2.2 at 2019-07-09 11:12:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1563ms (Views: 1449.0ms | ActiveRecord: 10.9ms)
+
+
+Started PATCH "/coordinates/2" for 10.0.2.2 at 2019-07-09 11:12:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5dFbsb/XHOCblxtNznMcWd2ljdSsBzazVJ/4S0N/z0lzbdamUKalXkzk2nj+4PBLgtdZKyCflRlQNybt0NkIUQ==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>""}, "commit"=>"投稿する", "id"=>"2"}
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 11.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template /edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/imymemine/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+  
+app/controllers/coordinates_controller.rb:41:in `update'

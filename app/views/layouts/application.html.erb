@@ -26,6 +26,9 @@
           <%= link_to "ログイン", new_user_session_path %>
         <% end %>
     </header>
+    <div class = "flash">
+      <%= flash[:notice] %>
+    </div>
     <%= yield %>
     <!-- 後にページが下がっても一緒に動いてくる仕組みにしたい -->
     <ul class="nav nav-pills nav-justified">

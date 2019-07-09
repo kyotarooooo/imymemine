@@ -1,5 +1,15 @@
 <h1>コーディネート編集</h1>
 
+<% if @coordinate.errors.any? %>
+	<div id = "error_explanation" class = "alert alert-danger" >
+		<ul>
+			<% @coordinate.errors.full_messages.each do |message| %>
+				<%= message %>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
 <%= form_for(@coordinate) do |f| %>
 	<div class = "field">
 		<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 300, 300, format: 'jpeg' %>

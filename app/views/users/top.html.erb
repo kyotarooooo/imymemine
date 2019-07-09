@@ -4,6 +4,12 @@
 <%= @user.user_name %>
 
 <%= link_to "編集", edit_user_path(@user.id) %>
+<%= link_to "コーディネートを投稿する", new_coordinate_path %>
 
+</br>
 
-アイテムを追加していく
+<% @coordinates.each do |coordinate| %>
+	<%= link_to coordinate_path(coordinate) do %>
+		<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 200, format: 'jpeg' %>
+	<% end %>
+<% end %>

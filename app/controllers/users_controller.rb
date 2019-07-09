@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def top
   	@user = current_user
+    @coordinates = Coordinate.where(user_id: @user)
   end
 
   def index

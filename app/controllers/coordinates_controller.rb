@@ -1,4 +1,9 @@
 class CoordinatesController < ApplicationController
+
+  before_action :user_login_check, only: [:new, :edit, :show]
+
+
+
   def index
   	@coordinates = Coordinate.all
   end
@@ -10,8 +15,12 @@ class CoordinatesController < ApplicationController
   def create
   	@coordinate = Coordinate.new(coordinate_params)
   	@coordinate.user_id = current_user.id
-  	@coordinate.save
-  	redirect_to root_path
+  	if @coordinate.save
+       flash[:notice] = "投稿しました。"
+  	   redirect_to mypage_path(current_user)
+    else
+       render 'coordinates/new'
+    end
   end
 
   def show
@@ -25,8 +34,12 @@ class CoordinatesController < ApplicationController
   def update
   	@coordinate = Coordinate.find(params[:id])
   	@coordinate.user_id = current_user.id
-  	@coordinate.update(coordinate_params)
-  	redirect_to coordinate_path(@coordinate.id)
+  	if @coordinate.update(coordinate_params)
+       flash[:notice] = "編集しました。"
+  	   redirect_to coordinate_path(@coordinate.id)
+    else
+       render 'coordinates/edit'
+    end
   end
 
   def destroy

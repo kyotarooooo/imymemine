@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
   		new_user_session_path
 	end
 
+  def user_login_check
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+  end
+
 	before_action :configure_permitted_parameters, if: :devise_controller?
   protected
   def configure_permitted_parameters

@@ -1,6 +1,19 @@
 <h1>コーディネートを投稿する</h1>
 
+<% if @coordinate.errors.any? %>
+	<div id = "error_explanation" class = "alert alert-danger">
+		<ul>
+			<% @coordinate.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
+
 <%= form_for(@coordinate) do |f| %>
+
+
 	<div class = "field">
 		<%= f.attachment_field :coordinate_image %>
 	</div>
