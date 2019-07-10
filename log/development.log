@@ -2839,3 +2839,65 @@ SyntaxError (/vagrant/imymemine/app/controllers/application_controller.rb:37: sy
   
 app/controllers/application_controller.rb:37: syntax error, unexpected end-of-input, expecting keyword_end
 app/controllers/admins/users_controller.rb:1:in `<top (required)>'
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:27:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (3.4ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (172.0ms)
+Completed 200 OK in 5286ms (Views: 5210.6ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/admins/top" for 10.0.2.2 at 2019-07-10 01:27:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::UsersController#top as HTML
+Redirected to http://localhost:3000/admins/sign_in
+Filter chain halted as :admin_login_check rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:27:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (3.4ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 1601ms (Views: 1596.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/coordinates" for 10.0.2.2 at 2019-07-10 01:28:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CoordinatesController#index as HTML
+Redirected to http://localhost:3000/admins/sign_in
+Filter chain halted as :admin_login_check rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:28:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (2.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (124.0ms)
+Completed 200 OK in 1754ms (Views: 1751.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/users" for 10.0.2.2 at 2019-07-10 01:29:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::UsersController#index as HTML
+Redirected to http://localhost:3000/admins/sign_in
+Filter chain halted as :admin_login_check rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:29:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (3.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (123.4ms)
+Completed 200 OK in 1757ms (Views: 1755.2ms | ActiveRecord: 0.0ms)
+
+
