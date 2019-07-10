@@ -1,15 +1,37 @@
+
 <h1>マイページ</h1>
+<div class="row user_show">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-4">
+    	<div class = "coordinate_index">
+    	<%= attachment_image_tag @user, :profile_image, :fill, 400, 400, format: 'jpeg', fallback: "no_image.jpg", size:'400x400', class: 'img-circle profile-thumb my-img edit-img' %>
+    	</div>
+    </div>
+    <div class="col-xs-6">
+    	<p>氏名（漢字） : <%= @user.kanji_name %></p>
+    	<p>氏名（カナ） : <%= @user.kana_name %></p>
+    	<p>ユーザー名 : <%= @user.user_name %></p>
+    	<p>性別 : <%= @user.sex %></p>
+    	<p>身長 : <%= @user.height %>cm</p>
+    	<p>メールアドレス : <%= @user.email %></p>
+    	<p>紹介文 : <%= @user.introduction %></p>
+    	<%= link_to "編集", edit_user_path(@user.id) %>
+		<%= link_to "コーディネートを投稿する", new_coordinate_path %>
+    	</div>
+    <div class="col-xs-1"></div>
+</div>
 
-<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
-<%= @user.user_name %>
 
-<%= link_to "編集", edit_user_path(@user.id) %>
-<%= link_to "コーディネートを投稿する", new_coordinate_path %>
-
-</br>
-
-<% @coordinates.each do |coordinate| %>
-	<%= link_to coordinate_path(coordinate) do %>
-		<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 200, format: 'jpeg' %>
-	<% end %>
-<% end %>
+<div class="row field">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+    	<div class = "user_show2">
+		<% @coordinates.each do |coordinate| %>
+			<%= link_to coordinate_path(coordinate) do %>
+			<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 200, format: 'jpeg' %>
+			<% end %>
+		<% end %>
+		</div>
+    </div>
+    <div class="col-xs-1"></div>
+</div>

@@ -11,17 +11,28 @@
 <% end %>
 
 
-<%= form_for(@user) do |f| %>
-	<div class = "field">
-		<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
-		<%= f.attachment_field :profile_image %>
-	</div>
+<div class="row field">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+      <%= form_for(@user) do |f| %>
+        <div class = "field">
+          <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
+          <%= f.attachment_field :profile_image %>
+        </div>
+    </div>
+    <div class="col-xs-1"></div>
+</div>
 
-	<div class = "field">
-		<%= f.text_area :introduction, :size=>"92", autofocus: true, autocomplete: "body" %>
-	</div>
 
-	<div class="field">
+<div class="row field">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+
+      <div class = "field">
+    <%= f.text_area :introduction, :size=>"92", autofocus: true, autocomplete: "body" %>
+  </div>
+
+  <div class="field">
     <%= f.label :氏名（漢字） %><br />
     <%= f.text_field :kanji_name, autofocus: true, autocomplete: "kanji_name" %>
   </div>
@@ -50,8 +61,12 @@
     <%= f.label :身長 %><br />
     <p><%= f.select :height, [["~150", "~150"], ["150~155", "150~155"], ["155~160", "155~160"], ["165~170", "165~170"], ["170~175", "170~175"], ["175~180", "175~180"], ["180~185", "180~185"], ["185~190", "185~190"], ["190~", "190~"]] ,class:"form-control" %>cm</p>
   </div>
-
-	<div class = "field">
-		<%= f.submit "投稿する" %>
-	</div>
+  <div class = "field">
+    <%= f.submit "投稿する" %>
+  </div>
 <% end %>
+    </div>
+    <div class="col-xs-1"></div>
+</div>
+
+<div class = "space"></div>

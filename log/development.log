@@ -3563,3 +3563,2265 @@ Refile::App: [2019-07-10 02:57:36 +0000] GET "/16eafd322d69ce5b7d7e89494fffd9a3b
 Completed 200 OK in 1344ms (Views: 1222.9ms | ActiveRecord: 4.2ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:00:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 9620ms (Views: 9520.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:02:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1260ms (Views: 1182.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:02:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1589ms (Views: 1484.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:03:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1303ms (Views: 1223.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:03:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1283ms (Views: 1202.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:04:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8504ms (Views: 8418.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:05:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8809ms (Views: 8709.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:05:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 9586ms (Views: 9486.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:05:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1271ms (Views: 1189.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:06:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1525ms (Views: 1425.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 03:06:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1335ms (Views: 1250.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:06:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.1ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1253ms (Views: 1169.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:07:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:4
+  Rendered coordinates/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1492ms (Views: 1398.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:09:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:4
+  Rendered coordinates/index.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1386ms (Views: 1297.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:09:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:4
+  Rendered coordinates/index.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1328ms (Views: 1238.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:11:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8747ms (Views: 8654.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:12:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1607ms (Views: 1499.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:14:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  Rendered coordinates/index.html.erb within layouts/application (36.4ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1357ms (Views: 1267.9ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:15:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  Rendered coordinates/index.html.erb within layouts/application (35.3ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1334ms (Views: 1240.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:16:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:9
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:9
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:9
+  Rendered coordinates/index.html.erb within layouts/application (41.0ms)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1554ms (Views: 1446.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:17:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:4
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  Rendered coordinates/index.html.erb within layouts/application (40.6ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1399ms (Views: 1304.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:17:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  Rendered coordinates/index.html.erb within layouts/application (54.3ms)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1638ms (Views: 1539.0ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:18:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:8
+  Rendered coordinates/index.html.erb within layouts/application (48.9ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1361ms (Views: 1272.9ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:21:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  Rendered coordinates/index.html.erb within layouts/application (43.8ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1458ms (Views: 1357.5ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:21:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/index.html.erb:10
+  Rendered coordinates/index.html.erb within layouts/application (46.0ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1570ms (Views: 1472.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:22:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (15.9ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1287ms (Views: 1202.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 03:22:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:11
+  Rendered users/top.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 1604ms (Views: 1498.1ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 03:22:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 1478ms (Views: 1368.5ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-10 03:22:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTNt2kjHuzCZxOtCc+7mdbDKsxlBHRzjtvIaM+U/i3+oUxrqvXBW9qTqIP6W4HI/E4ywBr+Hmp/znFf4Q998Gw==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9f561c5460 @tempfile=#<Tempfile:/tmp/RackMultipart20190710-2324-94yb4o.jpg>, @original_filename="ラケットとボール.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\xA9\xE3\x82\xB1\xE3\x83\x83\xE3\x83\x88\xE3\x81\xA8\xE3\x83\x9C\xE3\x83\xBC\xE3\x83\xAB.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"aaaaaaaaaaaaaaaaaa"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mCoordinate Create (10.4ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-10 03:22:51.177398"], ["updated_at", "2019-07-10 03:22:51.177398"], ["user_id", 1], ["body", "aaaaaaaaaaaaaaaaaa"], ["coordinate_image_id", "5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e"]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+Redirected to http://localhost:3000/users/1/top
+Completed 302 Found in 113ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 03:22:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:11
+  Rendered users/top.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 1488ms (Views: 1378.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/attachments/1e141afba2dfd76c1380d9f61338c431a414eeb3/store/fill/200/200/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:22:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:22:53 +0000] GET "/1e141afba2dfd76c1380d9f61338c431a414eeb3/store/fill/200/200/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" 200 241.5ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:22:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (17.8ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1330ms (Views: 1252.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:24:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (18.0ms)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1370ms (Views: 1280.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:25:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8855ms (Views: 8721.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:27:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (2.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8667ms (Views: 8585.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/coordinates/2" for 10.0.2.2 at 2019-07-10 03:28:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 1415ms (Views: 1307.4ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:29:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.1ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8849ms (Views: 8767.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:30:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8484ms (Views: 8412.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:30:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8660ms (Views: 8571.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:31:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8808ms (Views: 8743.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8647ms (Views: 8582.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:32:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1280ms (Views: 1192.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/attachments/849d7b6b692c18e0dac34967e9982433deaaa7bb/store/fill/250/250/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:32:36 +0000
+Started GET "/attachments/4efe90457880e5174c42bc2a068cfc6806ee126d/store/fill/250/250/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:32:36 +0000] GET "/849d7b6b692c18e0dac34967e9982433deaaa7bb/store/fill/250/250/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 291.7ms
+
+Started GET "/attachments/f1b12568fc2b1df3657e32a2d88ad3046b9279b1/store/fill/250/250/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:32:36 +0000] GET "/4efe90457880e5174c42bc2a068cfc6806ee126d/store/fill/250/250/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" 200 313.5ms
+
+Started GET "/attachments/b26f034085dc65e0ba294a4b32c475e2975cc573/store/fill/250/250/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/a0b2da192c4d1f3fa9e235906bc645aa4fce3bff/store/fill/250/250/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/ee6147431a72b8031d04c8bff5e86af1f7e679c4/store/fill/250/250/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:32:37 +0000] GET "/f1b12568fc2b1df3657e32a2d88ad3046b9279b1/store/fill/250/250/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 408.1ms
+
+Refile::App: [2019-07-10 03:32:37 +0000] GET "/a0b2da192c4d1f3fa9e235906bc645aa4fce3bff/store/fill/250/250/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 373.3ms
+
+Refile::App: [2019-07-10 03:32:37 +0000] GET "/ee6147431a72b8031d04c8bff5e86af1f7e679c4/store/fill/250/250/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" 200 417.1ms
+
+Refile::App: [2019-07-10 03:32:37 +0000] GET "/b26f034085dc65e0ba294a4b32c475e2975cc573/store/fill/250/250/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" 200 458.1ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:33:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1586ms (Views: 1458.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/attachments/fc2996099c18fdd9092b61cec452b15bf6bc08aa/store/fill/200/350/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:02 +0000
+Started GET "/attachments/78b76f18795dfb07a09b317bebfef48301c33b16/store/fill/200/350/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/0f20ec9699e30c84bd13d6ec2a160eb64fb7059a/store/fill/200/350/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:33:02 +0000] GET "/fc2996099c18fdd9092b61cec452b15bf6bc08aa/store/fill/200/350/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 211.5ms
+
+Started GET "/attachments/778548536efcf36b2024f9a2024ab1dffd2145f7/store/fill/200/350/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:33:02 +0000] GET "/78b76f18795dfb07a09b317bebfef48301c33b16/store/fill/200/350/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" 200 272.2ms
+
+Started GET "/attachments/09e7a49dfbdede4028a0c2d7373b24fdf2c81e42/store/fill/200/350/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/2f30575537228b25ad35daad9e1031de94454de0/store/fill/200/350/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:33:02 +0000] GET "/0f20ec9699e30c84bd13d6ec2a160eb64fb7059a/store/fill/200/350/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 411.3ms
+
+Refile::App: [2019-07-10 03:33:02 +0000] GET "/778548536efcf36b2024f9a2024ab1dffd2145f7/store/fill/200/350/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 248.6ms
+
+Refile::App: [2019-07-10 03:33:03 +0000] GET "/09e7a49dfbdede4028a0c2d7373b24fdf2c81e42/store/fill/200/350/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" 200 351.0ms
+
+Refile::App: [2019-07-10 03:33:03 +0000] GET "/2f30575537228b25ad35daad9e1031de94454de0/store/fill/200/350/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" 200 337.0ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:33:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1285ms (Views: 1206.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/attachments/bf95e0b81806d532dd419af4c2a45a50e37e6bc0/store/fill/300/350/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/50b539ef4bef200ce3672829488e8f965925de0a/store/fill/300/350/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/00e2bc2a51b5eb1d8c8128061ba25f9066ccec4d/store/fill/300/350/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:20 +0000
+Started GET "/attachments/e79b1b9ade917c365733e04b4822614d92c04ec9/store/fill/300/350/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:33:20 +0000] GET "/bf95e0b81806d532dd419af4c2a45a50e37e6bc0/store/fill/300/350/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" 200 330.3ms
+
+Started GET "/attachments/d0cdbdb37d7afbb77fccb70366bcfb17c3e52b45/store/fill/300/350/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/084a2ad81ac8cf124acce097908bd6e954a08737/store/fill/300/350/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 03:33:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 03:33:20 +0000] GET "/50b539ef4bef200ce3672829488e8f965925de0a/store/fill/300/350/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 433.0ms
+
+Refile::App: [2019-07-10 03:33:20 +0000] GET "/00e2bc2a51b5eb1d8c8128061ba25f9066ccec4d/store/fill/300/350/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 415.7ms
+
+Refile::App: [2019-07-10 03:33:20 +0000] GET "/e79b1b9ade917c365733e04b4822614d92c04ec9/store/fill/300/350/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 434.4ms
+
+Refile::App: [2019-07-10 03:33:20 +0000] GET "/d0cdbdb37d7afbb77fccb70366bcfb17c3e52b45/store/fill/300/350/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" 200 299.0ms
+
+Refile::App: [2019-07-10 03:33:20 +0000] GET "/084a2ad81ac8cf124acce097908bd6e954a08737/store/fill/300/350/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" 200 277.3ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:33:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 9599ms (Views: 9504.1ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 03:34:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1561ms (Views: 1460.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 06:33:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (54.5ms)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 9756ms (Views: 9595.6ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:34:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (215.1ms)
+Completed 200 OK in 1908ms (Views: 1770.5ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:36:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 1628ms (Views: 1511.2ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/attachments/83d885f2243d75895eacc20bdfd6ef9922451110/store/fill/50/50/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" for 10.0.2.2 at 2019-07-10 06:36:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 06:36:09 +0000] GET "/83d885f2243d75895eacc20bdfd6ef9922451110/store/fill/50/50/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" 200 585.9ms
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:36:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 1551ms (Views: 1429.2ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/attachments/b5b11f3e798056eb5cd272c17eac9a368bebd0b9/store/fill/100/100/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" for 10.0.2.2 at 2019-07-10 06:36:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 06:36:30 +0000] GET "/b5b11f3e798056eb5cd272c17eac9a368bebd0b9/store/fill/100/100/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" 200 316.2ms
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:38:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 1368ms (Views: 1265.8ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:38:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 1351ms (Views: 1253.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:39:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (6.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 1579ms (Views: 1455.6ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:40:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 1320ms (Views: 1219.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:41:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 1310ms (Views: 1201.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:42:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 1618ms (Views: 1497.0ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:42:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.0ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 1552ms (Views: 1435.3ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:43:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 9756ms (Views: 9644.1ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:44:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 1680ms (Views: 1563.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:45:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 9717ms (Views: 9595.3ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:45:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 1657ms (Views: 1543.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:46:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (6.0ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 9194ms (Views: 9072.2ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:49:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 8996ms (Views: 8896.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:49:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 1560ms (Views: 1440.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/attachments/27d9de8208c988acb2227c1280a36b7dae332042/store/fill/600/500/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 06:49:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 06:49:46 +0000] GET "/27d9de8208c988acb2227c1280a36b7dae332042/store/fill/600/500/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 199.3ms
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 1358ms (Views: 1258.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:53:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 9421ms (Views: 9302.1ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:54:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 8591ms (Views: 8492.7ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:54:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 9656ms (Views: 9538.8ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:55:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 1319ms (Views: 1219.7ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:56:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.0ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 9587ms (Views: 9465.0ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:57:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 1384ms (Views: 1284.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:58:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 8825ms (Views: 8724.7ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:58:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 1333ms (Views: 1220.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:59:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.7ms)
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 06:59:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (7.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 9285ms (Views: 9183.9ms | ActiveRecord: 11.2ms)
+
+
+Completed 200 OK in 1506ms (Views: 1409.6ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:00:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 1310ms (Views: 1209.5ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:00:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1552ms (Views: 1435.3ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:00:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 1317ms (Views: 1214.8ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:02:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (645.4ms)
+Completed 500 Internal Server Error in 964ms (ActiveRecord: 11.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `coordinate' for #<#<Class:0x00007f5b343bb370>:0x00007f5b410ac870>):
+    16:     <div class="col-xs-8">
+    17:     	<div class = "coordeinate_index3">
+    18:     	<%= @coordinate.body %></br>
+    19:     	<% if coordinate.user_id == current_user.id %>
+    20:     		<%= link_to "編集", edit_coordinate_path(@coordinate.id) %>
+    21: 			<%= link_to "削除", coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" %>
+    22: 		<% end %>
+  
+app/views/coordinates/show.html.erb:19:in `_app_views_coordinates_show_html_erb__2704863723861972687_70014954989780'
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:03:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1320ms (Views: 1221.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 07:03:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1612ms (Views: 1511.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:03:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1328ms (Views: 1239.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/coordinates/6" for 10.0.2.2 at 2019-07-10 07:03:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 1344ms (Views: 1238.1ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/attachments/b78ed5f24a7e7e3b769569a77a6058275c804171/store/fill/600/500/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:03:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 07:03:33 +0000] GET "/b78ed5f24a7e7e3b769569a77a6058275c804171/store/fill/600/500/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e/coordinate_image.jpeg" 200 226.4ms
+
+Started DELETE "/coordinates/6" for 10.0.2.2 at 2019-07-10 07:03:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aIyEd9hJr2F27KFFcomJ8N0pxwVHu4gE6d8GcquKbSMrjDR2Pl087IhRVm8V8dn+M2noNi7YAlV2Snt+UPPa8A==", "id"=>"6"}
+  [1m[36mCoordinate Load (4.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:47
+  [1m[36mCoordinate Destroy (19.7ms)[0m  [1m[31mDELETE FROM "coordinates" WHERE "coordinates"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/coordinates_controller.rb:47
+  [1m[35m (11.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:47
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 36.1ms)
+
+
+  
+Errno::ETXTBSY (Text file busy @ apply2files - /vagrant/imymemine/tmp/uploads/store/5154813eec77e6cb7fa5a06d1bea1b81d5a1276e21f493a1ba3bb4f7557e):
+  
+app/controllers/coordinates_controller.rb:47:in `destroy'
+  [1m[36mCoordinate Load (7.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" LIMIT ?[0m  [["LIMIT", 11]]
+Started DELETE "/coordinates/6" for 10.0.2.2 at 2019-07-10 07:07:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aIyEd9hJr2F27KFFcomJ8N0pxwVHu4gE6d8GcquKbSMrjDR2Pl087IhRVm8V8dn+M2noNi7YAlV2Snt+UPPa8A==", "id"=>"6"}
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:47
+  [1m[36mCoordinate Destroy (14.7ms)[0m  [1m[31mDELETE FROM "coordinates" WHERE "coordinates"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/coordinates_controller.rb:47
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:47
+Redirected to http://localhost:3000/coordinates
+Completed 302 Found in 140ms (ActiveRecord: 45.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:07:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 10028ms (Views: 9929.4ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:07:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 1598ms (Views: 1479.4ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/coordinates/1/edit" for 10.0.2.2 at 2019-07-10 07:07:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.7ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 1483ms (Views: 1367.0ms | ActiveRecord: 11.1ms)
+
+
+Started PATCH "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:08:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZZ/Mj4+vQhbroCva1gwhhU1YCvcx2SWDxAn+3xEjXst8llrBL0ofvREWgPQQeZuPUXhs81zlW9rGdazPvfDjow==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>"ああああああああああああああああああああああいいいいいいいいいいいいいい"}, "commit"=>"投稿する", "id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (5.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mCoordinate Update (11.7ms)[0m  [1m[33mUPDATE "coordinates" SET "coordinate_image_id" = ?, "body" = ?, "updated_at" = ? WHERE "coordinates"."id" = ?[0m  [["coordinate_image_id", "70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092"], ["body", "ああああああああああああああああああああああいいいいいいいいいいいいいい"], ["updated_at", "2019-07-10 07:08:04.623470"], ["id", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Redirected to http://localhost:3000/coordinates/1
+Completed 302 Found in 67ms (ActiveRecord: 34.7ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:08:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 1329ms (Views: 1230.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/coordinates/1/edit" for 10.0.2.2 at 2019-07-10 07:08:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:31
+  Rendering coordinates/edit.html.erb within layouts/application
+  Rendered coordinates/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 1335ms (Views: 1243.6ms | ActiveRecord: 6.9ms)
+
+
+Started PATCH "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:08:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nSKkHF7EFtLFG6U6NLlDeA1I0bSVbRf+h7oybwQTYEOEKzJS/iFLeT+tDhTyzPlyEWi3sPhRaaeFxmB/qMDdKw==", "coordinate"=>{"coordinate_image"=>"{}", "body"=>"ああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいい"}, "commit"=>"投稿する", "id"=>"1"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[36mCoordinate Update (24.0ms)[0m  [1m[33mUPDATE "coordinates" SET "coordinate_image_id" = ?, "body" = ?, "updated_at" = ? WHERE "coordinates"."id" = ?[0m  [["coordinate_image_id", "70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092"], ["body", "ああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいいああああああああああああああああああああああいいいいいいいいいいいいいい"], ["updated_at", "2019-07-10 07:08:22.169958"], ["id", 1]]
+  ↳ app/controllers/coordinates_controller.rb:37
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:37
+Redirected to http://localhost:3000/coordinates/1
+Completed 302 Found in 83ms (ActiveRecord: 52.3ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:08:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 1346ms (Views: 1244.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:10:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 9915ms (Views: 9809.9ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:11:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 9269ms (Views: 9159.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:13:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 9302ms (Views: 9188.7ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:14:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 9307ms (Views: 9174.8ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:14:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 1283ms (Views: 1192.1ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:17:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 1325ms (Views: 1225.5ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:17:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 1374ms (Views: 1268.8ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:17:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 1403ms (Views: 1297.8ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:17:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 1373ms (Views: 1269.7ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/attachments/eb1c29683cf1e79cafd1f93ea7efb17d92a57f05/store/fill/400/400/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" for 10.0.2.2 at 2019-07-10 07:17:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 07:17:51 +0000] GET "/eb1c29683cf1e79cafd1f93ea7efb17d92a57f05/store/fill/400/400/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" 200 493.2ms
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:19:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 9602ms (Views: 9486.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:21:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 9089ms (Views: 8994.3ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:23:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 8981ms (Views: 8874.5ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 07:25:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 1376ms (Views: 1271.2ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 07:27:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1430ms (Views: 1350.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:27:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1350ms (Views: 1272.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:28:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8812ms (Views: 8725.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:30:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1455ms (Views: 1368.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/coordinates/3" for 10.0.2.2 at 2019-07-10 07:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (6.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  Rendered coordinates/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 1665ms (Views: 1541.8ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/attachments/549f7f0b18f5ebedab639f82a878333c683a02a1/store/fill/600/500/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:31:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 07:31:25 +0000] GET "/549f7f0b18f5ebedab639f82a878333c683a02a1/store/fill/600/500/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 175.5ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:32:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 9779ms (Views: 9625.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:32:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1336ms (Views: 1251.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/attachments/b8143f4698db9cd62aac6cb80aa68556dc2548ad/store/fill/200/250/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:32:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/7754a29e9e3c082dd4d140817612a3235d846394/store/fill/200/250/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:32:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/514091968c866160b72412c988d9b7fd00462235/store/fill/200/250/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:32:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 07:32:48 +0000] GET "/7754a29e9e3c082dd4d140817612a3235d846394/store/fill/200/250/70d7cecfc5ad89573f54629b3bca9e05964044eedce242c7c58c24280092/coordinate_image.jpeg" 200 268.8ms
+
+Started GET "/attachments/957c11894026b3c477856146c2a76822d7cee568/store/fill/200/250/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:32:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 07:32:48 +0000] GET "/b8143f4698db9cd62aac6cb80aa68556dc2548ad/store/fill/200/250/f4722003f015ba21a22ff97a62e2a11d0841ff6e385c6af4f7d726750154/coordinate_image.jpeg" 200 351.7ms
+
+Started GET "/attachments/11fb3ffff4a959a3159a9d71448b2e97d9c4533f/store/fill/200/250/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 07:32:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 07:32:49 +0000] GET "/514091968c866160b72412c988d9b7fd00462235/store/fill/200/250/11d61dce46604dd5c8d16cb43404bc2f20d334d6807f76460e37c690283e/coordinate_image.jpeg" 200 354.9ms
+
+Refile::App: [2019-07-10 07:32:49 +0000] GET "/957c11894026b3c477856146c2a76822d7cee568/store/fill/200/250/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 208.0ms
+
+Refile::App: [2019-07-10 07:32:49 +0000] GET "/11fb3ffff4a959a3159a9d71448b2e97d9c4533f/store/fill/200/250/610d28402c1b91dd9a2e21d9ab1164ad970a1decb83a90fa97c5c9ee9b71/coordinate_image.jpeg" 200 214.5ms
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 07:34:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1753ms (Views: 1573.8ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:34:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  Rendered coordinates/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 1353ms (Views: 1251.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 07:34:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:11
+  Rendered users/top.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 1504ms (Views: 1403.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 07:40:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:21
+  Rendered users/top.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 1618ms (Views: 1504.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 07:45:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:27
+  Rendered users/top.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 1576ms (Views: 1463.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 07:46:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.1ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 1326ms (Views: 1233.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/coordinates/1" for 10.0.2.2 at 2019-07-10 07:46:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  Rendered coordinates/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1542ms (Views: 1427.3ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 07:46:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1525ms (Views: 1421.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 07:50:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1301ms (Views: 1209.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 07:51:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1544ms (Views: 1434.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 07:51:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1569ms (Views: 1461.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 07:53:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 1334ms (Views: 1242.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:01:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9101ms (Views: 8993.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:01:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 1572ms (Views: 1467.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:02:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 9487ms (Views: 9378.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:04:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1560ms (Views: 1454.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:04:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1304ms (Views: 1222.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:04:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1523ms (Views: 1423.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:05:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1343ms (Views: 1255.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:05:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1327ms (Views: 1243.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:05:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1564ms (Views: 1459.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-10 08:05:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1598ms (Views: 1489.7ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-10 08:06:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1J006MqlKH53mQSTOT4u9fMO+PXOi2Sm9rY94k8raTSXnYTpLLG784kk87leRn77HU7Xxqfo7vdpI0DutFLe5w==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f00282b60e0 @tempfile=#<Tempfile:/tmp/RackMultipart20190710-6816-1lw8r3y.png>, @original_filename="ラケット情報の記載位置.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\xA9\xE3\x82\xB1\xE3\x83\x83\xE3\x83\x88\xE6\x83\x85\xE5\xA0\xB1\xE3\x81\xAE\xE8\xA8\x98\xE8\xBC\x89\xE4\xBD\x8D\xE7\xBD\xAE.png\"\r\nContent-Type: image/png\r\n">, "body"=>"ああああああああああああ\r\nあああああああああああああああああああああああああああああああああああああああ"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[36mCoordinate Create (14.1ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-10 08:06:14.360276"], ["updated_at", "2019-07-10 08:06:14.360276"], ["user_id", 1], ["body", "ああああああああああああ\r\nあああああああああああああああああああああああああああああああああああああああ"], ["coordinate_image_id", "425a1aff646102502db75065257b82457a2eb450a081248d46806121b247"]]
+  ↳ app/controllers/coordinates_controller.rb:18
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:18
+Redirected to http://localhost:3000/users/1/top
+Completed 302 Found in 85ms (ActiveRecord: 38.0ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 08:06:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 1584ms (Views: 1474.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/attachments/eccc0aba600ba31a5a6ea0e93ec126794bf60a29/store/fill/200/200/425a1aff646102502db75065257b82457a2eb450a081248d46806121b247/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 08:06:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 08:06:16 +0000] GET "/eccc0aba600ba31a5a6ea0e93ec126794bf60a29/store/fill/200/200/425a1aff646102502db75065257b82457a2eb450a081248d46806121b247/coordinate_image.jpeg" 200 173.7ms
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-10 08:07:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (125.9ms)
+Completed 200 OK in 1825ms (Views: 1640.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-10 08:11:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 1262ms (Views: 1165.7ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-10 08:13:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 9545ms (Views: 9428.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-10 08:13:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 1348ms (Views: 1242.0ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-10 08:14:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 1423ms (Views: 1333.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 08:14:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1568ms (Views: 1467.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 08:14:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1394ms (Views: 1306.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/attachments/34c7d2371b6adee891f000b4cac21470cc26bee2/store/fill/200/250/425a1aff646102502db75065257b82457a2eb450a081248d46806121b247/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 08:14:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 08:14:10 +0000] GET "/34c7d2371b6adee891f000b4cac21470cc26bee2/store/fill/200/250/425a1aff646102502db75065257b82457a2eb450a081248d46806121b247/coordinate_image.jpeg" 200 96.9ms
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:14:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 1316ms (Views: 1221.8ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/attachments/9832c0b4e1cf0d7ddc888b9f59797cf221472c6b/store/fill/150/150/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" for 10.0.2.2 at 2019-07-10 08:14:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 08:14:18 +0000] GET "/9832c0b4e1cf0d7ddc888b9f59797cf221472c6b/store/fill/150/150/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" 200 383.7ms
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:42:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1591ms (Views: 1484.7ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:42:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 1642ms (Views: 1533.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:43:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 1589ms (Views: 1478.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:44:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1604ms (Views: 1491.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:44:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 1295ms (Views: 1203.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/attachments/07c04d6c5a2810a46f0944c096e3456918de219a/store/fill/60/60/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" for 10.0.2.2 at 2019-07-10 08:44:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 08:44:32 +0000] GET "/07c04d6c5a2810a46f0944c096e3456918de219a/store/fill/60/60/2d3cc14f65f7a5572b42f4852e939d3d3bf63b5b6b43ec0d75c0b1243ebc/profile_image.jpeg" 200 310.5ms
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:48:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 10215ms (Views: 10008.6ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 08:48:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 1711ms (Views: 1563.3ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/attachments/0a7ad7fd6025d8579d0865dcf526c3a51cbaba57/store/fill/150/150/425a1aff646102502db75065257b82457a2eb450a081248d46806121b247/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 08:48:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-10 08:48:26 +0000] GET "/0a7ad7fd6025d8579d0865dcf526c3a51cbaba57/store/fill/150/150/425a1aff646102502db75065257b82457a2eb450a081248d46806121b247/coordinate_image.jpeg" 200 136.0ms
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 08:48:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 1595ms (Views: 1476.9ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-10 08:50:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 1581ms (Views: 1469.3ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-07-10 08:50:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 1618ms (Views: 1510.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 08:50:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:5
+  Rendered coordinates/index.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1560ms (Views: 1476.5ms | ActiveRecord: 7.1ms)
+
+
