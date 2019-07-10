@@ -3290,3 +3290,276 @@ Processing by HomesController#about as HTML
 Completed 200 OK in 1589ms (Views: 1473.5ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:30:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/layouts/application.html.erb:55: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/vagrant/imymemine/app/views/layouts/application.html.erb:57: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:55: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/application.html.erb:57: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:30:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1561ms (Views: 1461.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:31:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8786ms (Views: 8700.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:32:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8509ms (Views: 8438.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:32:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8612ms (Views: 8529.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:33:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8474ms (Views: 8397.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:34:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8777ms (Views: 8702.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 02:34:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (13.0ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1305ms (Views: 1215.1ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-07-10 02:39:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CiwyCVNcbQLl0m7aR8UYWL/lsrLgoGUF2qTgApQAUF7D1msDhQA3RsQUVX1yNzABAqYF2ioHcw/1nCY3fuyvMQ=="}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 133ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-10 02:39:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 1503ms (Views: 1500.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-10 02:40:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (105.4ms)
+Completed 200 OK in 1477ms (Views: 1474.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-10 02:41:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9lbSd1oCFNxL0flw7Thed1MCmK58JikoxVQW7dVEfjwq4DLWbzhNiOLOcbVCx/A8PTX5qiqvgZrXislNJ/cSwg==", "user"=>{"email"=>"qqq@qqq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqq@qqq.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 531ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:41:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1284ms (Views: 1200.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:43:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1618ms (Views: 1519.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:43:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1304ms (Views: 1220.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:44:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1368ms (Views: 1280.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:45:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1539ms (Views: 1441.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:45:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1588ms (Views: 1443.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:48:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1383ms (Views: 1252.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:49:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 8747ms (Views: 8663.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:51:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1287ms (Views: 1205.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:53:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 9384ms (Views: 9286.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-10 02:53:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.8ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1549ms (Views: 1451.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/coordinates/4" for 10.0.2.2 at 2019-07-10 02:57:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.8ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:27
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:3
+  Rendered coordinates/show.html.erb within layouts/application (303.8ms)
+Completed 200 OK in 1807ms (Views: 1597.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/attachments/16eafd322d69ce5b7d7e89494fffd9a3b20dd61b/store/fill/300/300/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-10 02:57:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/" for 10.0.2.2 at 2019-07-10 02:57:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+Refile::App: [2019-07-10 02:57:36 +0000] GET "/16eafd322d69ce5b7d7e89494fffd9a3b20dd61b/store/fill/300/300/6fa8afe2aca1b3efcd35f4bc4a9720e0ef6133c0ba78e580a3996fe2c3ca/coordinate_image.jpeg" 200 1086.8ms
+
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1344ms (Views: 1222.9ms | ActiveRecord: 4.2ms)
+
+
