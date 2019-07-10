@@ -11,30 +11,52 @@
 
   <body>
     <header>
-      <h1><%= link_to "ImYmEmINE", root_path %></h1>
-        <% if user_signed_in? %>
-          <%= link_to "コーディネート一覧", coordinates_path %>
-          <%= link_to "ユーザー一覧", users_path %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <%= link_to "マイページ", mypage_path(current_user.id) %>
-        <% elsif admin_signed_in? %>
-          <h1>管理者ログイン中</h1>
-          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
-        <% else %>
-          <%= link_to "一覧", coordinates_path %>
-          <%= link_to "新規登録", new_user_registration_path %>
-          <%= link_to "ログイン", new_user_session_path %>
-        <% end %>
+      <% if user_signed_in? %>
+        <div class="page-header">
+          <h1><%= link_to "m.m.m.", root_path %>
+            <small>ようこそ <%= current_user.user_name %> さん。</small>
+          </h1>
+        </div>
+      <% elsif admin_signed_in? %>
+        <div class="page-header">
+          <h1><%= link_to "m.m.m.", root_path %>
+            <small>管理者ログイン中</small>
+          </h1>
+        </div>
+      <% else %>
+        <div class="page-header">
+          <h1><%= link_to "m.m.m.", root_path %>
+            <small>ようこそ ゲスト さん。</small>
+          </h1>
+        </div>
+      <% end %>
     </header>
     <div class = "flash">
       <%= flash[:notice] %>
     </div>
     <%= yield %>
     <!-- 後にページが下がっても一緒に動いてくる仕組みにしたい -->
-    <ul class="nav nav-pills nav-justified">
-      <li role="presentation"><a href="#">ホーム</a></li>
-      <li role="presentation"><a href="#">メニューＡ</a></li>
-      <li role="presentation"><a href="#">メニューＢ</a></li>
-    </ul>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="collapse navbar-collapse" id="navbarEexample9">
+        <% if user_signed_in? %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "コーディネート一覧", coordinates_path %></li>
+          <li class="active"><%= link_to "ユーザー一覧", users_path %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li class="active"><%= link_to "マイページ", mypage_path(current_user.id) %></li>
+        </ul>
+        <% elsif admin_signed_in? %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
+        </ul>
+        <% else %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "コーディネート一覧", coordinates_path %></li>
+          <li class="active"><%= link_to "新規登録", new_user_registration_path %></li>
+          <li><%= link_to "ログイン", new_user_session_path %></li>
+        </ul>
+        <% end %>
+      </div>
+    </nav>
   </body>
 </html>
