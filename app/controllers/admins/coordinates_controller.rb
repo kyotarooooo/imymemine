@@ -1,4 +1,8 @@
 class Admins::CoordinatesController < ApplicationController
+
+  before_action :admin_login_check
+
+
 	def index
 		@coordinates = Coordinate.all
 	end

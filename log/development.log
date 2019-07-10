@@ -2672,3 +2672,170 @@ Completed 500 Internal Server Error in 305ms (ActiveRecord: 4.6ms)
 NameError (undefined local variable or method `scope' for #<Admins::SessionsController:0x00007fc11801dc28>):
   
 app/controllers/application_controller.rb:13:in `after_sign_out_path_for'
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2019-07-09 12:09:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jDXjp02MER03PwRB/Hrz/FeezM/9K2BMI6p26rOTb7MDuqFI56DjJlkxWRPlXhKjMEPbmTH99ZolikjrB8BRtA=="}
+  [1m[36mAdmin Load (4.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 148ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-09 12:09:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (3.4ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (135.1ms)
+Completed 200 OK in 6326ms (Views: 6314.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-07-09 12:10:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (2.0ms)
+  Rendered users/shared/_links.html.erb (3.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (166.3ms)
+Completed 200 OK in 1607ms (Views: 1526.1ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 12:10:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 1613ms (Views: 1609.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-09 12:10:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P975/w6/h3yFienv+zjiv9SdqQDozmQAsW+3DMnX748uL/VGhDPFXuupGYLJV0rb+XPvaWxPJyNlKQlmvzCarw==", "user"=>{"email"=>"qqq@qqq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqq@qqq.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 584ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-09 12:10:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1549ms (Views: 1451.3ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-07-09 12:10:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NSIeYoW9XhJjNNy2c31p8pO20428pajH9X8NI5qJpzPUJ752Icvb53VRL2HWQNC1qboyNWGykGO8am6GICgaAg=="}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 28ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 12:10:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (104.7ms)
+Completed 200 OK in 1458ms (Views: 1455.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-09 12:11:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 1486ms (Views: 1483.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:21:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (2.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (329.9ms)
+Completed 200 OK in 7584ms (Views: 7508.4ms | ActiveRecord: 22.0ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:21:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IskqehaFxJ1PzsRvh5kNth8BCxq10+vI9HjD1WDo6IYsOO0esYrwFONMkMS2oVPlUxPCjB4gZ8x5MOGOj5tlrg==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (5.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/top
+Completed 302 Found in 875ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/admins/top" for 10.0.2.2 at 2019-07-10 01:21:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::UsersController#top as HTML
+  Rendering admins/users/top.html.erb within layouts/application
+  Rendered admins/users/top.html.erb within layouts/application (1.5ms)
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 1353ms (Views: 1252.7ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2019-07-10 01:21:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qMWvT3K1s/ALADNLMLf6TlkPOljW+ovwUT82F7YDehM1QiZDtOTKFa3LHHGufD0xLmZF+Dc+81I8I/7cySukOg=="}
+  [1m[36mAdmin Load (7.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 57ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2019-07-10 01:21:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (3.3ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (121.8ms)
+Completed 200 OK in 1692ms (Views: 1689.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/top" for 10.0.2.2 at 2019-07-10 01:22:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::UsersController#top as HTML
+  Rendering admins/users/top.html.erb within layouts/application
+  Rendered admins/users/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1393ms (Views: 1320.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/top" for 10.0.2.2 at 2019-07-10 01:26:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/imymemine/app/controllers/application_controller.rb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/application_controller.rb:37: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/admins/users_controller.rb:1:in `<top (required)>'

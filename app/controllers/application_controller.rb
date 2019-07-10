@@ -24,6 +24,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin_login_check
+    unless admin_signed_in?
+      redirect_to new_admin_session_path
+    end
+  end
+
 	before_action :configure_permitted_parameters, if: :devise_controller?
   protected
   def configure_permitted_parameters
