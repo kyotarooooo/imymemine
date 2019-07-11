@@ -44,6 +44,7 @@
           <li class="active"><%= link_to "ユーザー一覧", users_path %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <li class="active"><%= link_to "マイページ", mypage_path(current_user.id) %></li>
+          <li><%= link_to "お問い合わせ", inquiry_path %></li>
         </ul>
         <% elsif admin_signed_in? %>
         <ul class="nav navbar-nav">
@@ -54,6 +55,7 @@
           <li><%= link_to "コーディネート一覧", coordinates_path %></li>
           <li class="active"><%= link_to "新規登録", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li><%= link_to "お問い合わせ", inquiry_path %></li>
         </ul>
         <% end %>
       </div>
