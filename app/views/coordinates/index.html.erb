@@ -1,6 +1,18 @@
 <div class="row field">
     <div class="col-xs-1"></div>
     <div class="col-xs-10">
+    	<ul class="nav nav-pills nav-justified">
+			<li role="presentation"><%= link_to "男性", mens_path %></li>
+			<li role="presentation"><%= link_to "女性", ladies_path %></li>
+		</ul>
+    </div>
+    <div class="col-xs-1"></div>
+</div>
+
+
+<div class="row field">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
 	    <div class = "coordinate_index">
 	   	<% @coordinates.each do |coordinate| %>
 			<%= link_to coordinate_path(coordinate.id) do %>

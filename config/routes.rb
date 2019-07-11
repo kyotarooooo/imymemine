@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "inquiry" => "inquiry#index" #入力画面
   post "inquiry/confirm" => "inquiry#confirm" #確認画面
   post "inquiry/thanks" => "inquiry#thanks" #送信完了画面
+  get "coordinates/mens" => "coordinates#mens_coordinate", as: "mens"
+  get "coordinates/ladies" => "coordinates#ladies_coordinate", as: "ladies"
 
 
 devise_for :admins, controllers: {
@@ -19,6 +21,7 @@ devise_for :users, controllers: {
 }
 	resources :coordinates, only:[:new, :create, :index, :show, :edit, :update, :destroy]
 	resources :users, only:[:index, :show, :edit, :update]
+
 
 namespace :admins do
 	resources :coordinates, only: [:index, :show, :destroy]

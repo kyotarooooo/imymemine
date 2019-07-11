@@ -3,7 +3,6 @@
     <div class="col-xs-10">
     	<h1>ユーザー一覧</h1>
 			<table class="table">
-			<% @users.each do |user| %>
 			  <thead>
 			    <tr>
 			      <th></th>
@@ -12,6 +11,7 @@
 			      <th>身長</th>
 			    </tr>
 			  </thead>
+			<% @users.each do |user| %>
 			  <tbody>
 			    <tr>
 			      <th>

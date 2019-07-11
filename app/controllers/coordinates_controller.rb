@@ -48,6 +48,16 @@ class CoordinatesController < ApplicationController
   	redirect_to coordinates_path
   end
 
+  def mens_coordinate
+    @users = User.where(sex: "男性")
+    @coordinates = Coordinate.where(user_id: @users)
+  end
+
+  def ladies_coordinate
+    @users = User.where(sex: "女性")
+    @coordinates = Coordinate.where(user_id: @users)
+  end
+
   private
   def coordinate_params
   	params.require(:coordinate).permit(:coordinate_image, :body)
