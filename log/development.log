@@ -14048,3 +14048,539 @@ Started GET "/attachments/b680bd203430bdbc5a02ff171f2e2743ea621ec6/store/fill/20
 Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Refile::App: [2019-07-20 07:22:12 +0000] GET "/b680bd203430bdbc5a02ff171f2e2743ea621ec6/store/fill/200/200/db28a0879a6a01c3f39bdd9fd6560b36474f3f0c93afda2a60f93986fe9a/item_image.jpeg" 200 61.5ms
 
+Started GET "/coordinates/21" for 10.0.2.2 at 2019-07-20 09:04:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:28
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mItem Load (4.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 21]]
+  ↳ app/views/coordinates/show.html.erb:25
+  Rendered coordinates/show.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 27827ms (Views: 27535.1ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-20 09:06:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 1953ms (Views: 1844.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/attachments/badb14e5cd84bc320b1b3d21c8641653ea44fdea/store/fill/200/200/cdf3a00c46581adbfc3e10a6361982b4c1cdff33a02576eb68de32cc270c/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-20 09:06:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-20 09:06:04 +0000] GET "/badb14e5cd84bc320b1b3d21c8641653ea44fdea/store/fill/200/200/cdf3a00c46581adbfc3e10a6361982b4c1cdff33a02576eb68de32cc270c/coordinate_image.jpeg" 200 153.7ms
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:06:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 4.2ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/coordinates/new.html.erb:86: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/coordinates/new.html.erb:86: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:06:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (983.4ms)
+Completed 500 Internal Server Error in 1326ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item' for #<#<Class:0x00007f9e4468f3f0>:0x00007f9e46608b50>):
+    27: <h3>アイテムを登録する</h3>
+    28: <div id = "items">
+    29: 	<%= f.fields_for :items do |item_fields| %>
+    30: 		<%= render 'item_fields', f: item %>
+    31: 	<% end %>
+    32: 	<div id = "links">
+    33: 
+  
+app/views/coordinates/new.html.erb:30:in `block (2 levels) in _app_views_coordinates_new_html_erb__532075402392783631_70158881147480'
+app/views/coordinates/new.html.erb:29:in `block in _app_views_coordinates_new_html_erb__532075402392783631_70158881147480'
+app/views/coordinates/new.html.erb:16:in `_app_views_coordinates_new_html_erb__532075402392783631_70158881147480'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:07:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 376ms (ActiveRecord: 5.3ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/coordinates/new.html.erb:30: syntax error, unexpected ':', expecting ')'
+...end=( render 'item_fields', f :item );@output_buffer.safe_ap...
+...                              ^):
+  
+app/views/coordinates/new.html.erb:30: syntax error, unexpected ':', expecting ')'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:09:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 376ms (ActiveRecord: 4.7ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/coordinates/new.html.erb:30: syntax error, unexpected ':', expecting ')'
+...end=( render 'item_fields', f :item_fields );@output_buffer....
+...                              ^):
+  
+app/views/coordinates/new.html.erb:30: syntax error, unexpected ':', expecting ')'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:09:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (621.7ms)
+  Rendered coordinates/new.html.erb within layouts/application (709.1ms)
+Completed 500 Internal Server Error in 1022ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item_fields' for #<#<Class:0x00007f9e4468f3f0>:0x00007f9e46eb93f8>):
+    1: <div class = "nested-fields well well-compact">
+    2: 	<div class = "field">
+    3:     <%= item_fields.attachment_field :item_image %>
+    4:   </div>
+    5: 
+    6:   <div class = "field">
+  
+app/views/coordinates/_item_fields.html.erb:3:in `_app_views_coordinates__item_fields_html_erb___3992894971928632852_70158885636640'
+app/views/coordinates/new.html.erb:30:in `block (2 levels) in _app_views_coordinates_new_html_erb__532075402392783631_70158885703340'
+app/views/coordinates/new.html.erb:29:in `block in _app_views_coordinates_new_html_erb__532075402392783631_70158885703340'
+app/views/coordinates/new.html.erb:16:in `_app_views_coordinates_new_html_erb__532075402392783631_70158885703340'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:11:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (492.5ms)
+  Rendered coordinates/new.html.erb within layouts/application (584.9ms)
+Completed 500 Internal Server Error in 944ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item_fields' for #<#<Class:0x00007f9e4468f3f0>:0x00007f9e47178e90>):
+    4:   </div>
+    5: 
+    6:   <div class = "field">
+    7:     <%= item_fields.label :アイテム名 %><br />
+    8:     <%= item_fields.text_field :item_name %>
+    9:   </div>
+   10: 
+  
+app/views/coordinates/_item_fields.html.erb:7:in `_app_views_coordinates__item_fields_html_erb___3992894971928632852_70158887079040'
+app/views/coordinates/new.html.erb:30:in `block (2 levels) in _app_views_coordinates_new_html_erb__532075402392783631_70158887144440'
+app/views/coordinates/new.html.erb:29:in `block in _app_views_coordinates_new_html_erb__532075402392783631_70158887144440'
+app/views/coordinates/new.html.erb:16:in `_app_views_coordinates_new_html_erb__532075402392783631_70158887144440'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:11:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (578.1ms)
+  Rendered coordinates/new.html.erb within layouts/application (664.5ms)
+Completed 500 Internal Server Error in 996ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item_fields' for #<#<Class:0x00007f9e4468f3f0>:0x00007f9e461c6ad8>):
+    4:   </div>
+    5: 
+    6:   <div class = "field">
+    7:     <%= item_fields.label :アイテム名 %><br />
+    8:     <%= item_fields.text_field :item_name %>
+    9:   </div>
+   10: 
+  
+app/views/coordinates/_item_fields.html.erb:7:in `_app_views_coordinates__item_fields_html_erb___3992894971928632852_70158878817060'
+app/views/coordinates/new.html.erb:30:in `block (2 levels) in _app_views_coordinates_new_html_erb__532075402392783631_70158878915100'
+app/views/coordinates/new.html.erb:29:in `block in _app_views_coordinates_new_html_erb__532075402392783631_70158878915100'
+app/views/coordinates/new.html.erb:16:in `_app_views_coordinates_new_html_erb__532075402392783631_70158878915100'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:11:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (545.1ms)
+  Rendered coordinates/new.html.erb within layouts/application (636.4ms)
+Completed 500 Internal Server Error in 944ms (ActiveRecord: 6.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item_fields' for #<#<Class:0x00007f9e4468f3f0>:0x00007f9e461f6508>):
+    14:   </div>
+    15: 
+    16:   <div class = "field">
+    17:     <%= item_fields.label :サイズ %><br />
+    18:         <%= item_fields.select :size, [["XS", "XS"], ["S", "S"], ["M", "M"], ["L", "L"], ["XL", "XL"], ["FREE", "FREE"], ["その他", "その他"]] ,class:"form-control" %>
+    19:   </div>
+    20: 
+  
+app/views/coordinates/_item_fields.html.erb:17:in `_app_views_coordinates__item_fields_html_erb___3992894971928632852_70158878939400'
+app/views/coordinates/new.html.erb:30:in `block (2 levels) in _app_views_coordinates_new_html_erb__532075402392783631_70158879012660'
+app/views/coordinates/new.html.erb:29:in `block in _app_views_coordinates_new_html_erb__532075402392783631_70158879012660'
+app/views/coordinates/new.html.erb:16:in `_app_views_coordinates_new_html_erb__532075402392783631_70158879012660'
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:12:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (108.5ms)
+  Rendered coordinates/_item_fields.html.erb (10.9ms)
+  Rendered coordinates/new.html.erb within layouts/application (292.8ms)
+Completed 200 OK in 2077ms (Views: 1976.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:12:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (9.6ms)
+  Rendered coordinates/_item_fields.html.erb (10.0ms)
+  Rendered coordinates/new.html.erb within layouts/application (203.1ms)
+Completed 200 OK in 1992ms (Views: 1902.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-20 09:13:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/_item_fields.html.erb (10.1ms)
+  Rendered coordinates/_item_fields.html.erb (10.7ms)
+  Rendered coordinates/new.html.erb within layouts/application (173.0ms)
+Completed 200 OK in 1731ms (Views: 1641.6ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-20 09:16:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cvkgZrGs/rJwHoQ2l0XKtwfszMMLQyf1J1IFBYSqYA92wPIG9W2jESo39pJFTY8+g7Vtt0OBnxYSJnuKPPV+6w==", "coordinate"=>{"coordinate_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9e46b80628 @tempfile=#<Tempfile:/tmp/RackMultipart20190720-3154-b4yegx.jpg>, @original_filename="テニス足元.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[coordinate_image]\"; filename=\"\xE3\x83\x86\xE3\x83\x8B\xE3\x82\xB9\xE8\xB6\xB3\xE5\x85\x83.jpg\"\r\nContent-Type: image/jpeg\r\n">, "body"=>"cocoonでフォームを追加", "items_attributes"=>{"1563614065311"=>{"item_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9e46b80498 @tempfile=#<Tempfile:/tmp/RackMultipart20190720-3154-1bcmteu.jpg>, @original_filename="スニーカー.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[items_attributes][1563614065311][item_image]\"; filename=\"\xE3\x82\xB9\xE3\x83\x8B\xE3\x83\xBC\xE3\x82\xAB\xE3\x83\xBC.jpg\"\r\nContent-Type: image/jpeg\r\n">, "item_name"=>"スニーカー", "brand"=>"NIKE", "size"=>"XS", "color"=>"シューズ", "_destroy"=>"false"}, "1563614164938"=>{"item_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9e46b801c8 @tempfile=#<Tempfile:/tmp/RackMultipart20190720-3154-pv0099.jpg>, @original_filename="ソックス.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"coordinate[items_attributes][1563614164938][item_image]\"; filename=\"\xE3\x82\xBD\xE3\x83\x83\xE3\x82\xAF\xE3\x82\xB9.jpg\"\r\nContent-Type: image/jpeg\r\n">, "item_name"=>"ソックス", "brand"=>"aaa", "size"=>"XS", "color"=>"レッグウェア", "_destroy"=>"false"}}}, "commit"=>"投稿する"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:19
+  [1m[36mCoordinate Create (15.1ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "user_id", "body", "coordinate_image_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-20 09:16:27.766938"], ["updated_at", "2019-07-20 09:16:27.766938"], ["user_id", 1], ["body", "cocoonでフォームを追加"], ["coordinate_image_id", "e47ad9b170a717c43396948a3e0f2681c251dade3d62f5e671855f646b44"]]
+  ↳ app/controllers/coordinates_controller.rb:19
+  [1m[36mItem Create (1.4ms)[0m  [1m[32mINSERT INTO "items" ("created_at", "updated_at", "item_name", "item_image_id", "size", "brand", "color", "coordinate_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-20 09:16:27.806781"], ["updated_at", "2019-07-20 09:16:27.806781"], ["item_name", "スニーカー"], ["item_image_id", "522ae1fe8c406df993830c1dfb0f2932b9778681bc3bf4da677894fd6a90"], ["size", "XS"], ["brand", "NIKE"], ["color", "シューズ"], ["coordinate_id", 22]]
+  ↳ app/controllers/coordinates_controller.rb:19
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("created_at", "updated_at", "item_name", "item_image_id", "size", "brand", "color", "coordinate_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-20 09:16:27.832302"], ["updated_at", "2019-07-20 09:16:27.832302"], ["item_name", "ソックス"], ["item_image_id", "b0ded493d2aa2e63671e64a505d7781c06142eeab1cae09cf790fecdc771"], ["size", "XS"], ["brand", "aaa"], ["color", "レッグウェア"], ["coordinate_id", 22]]
+  ↳ app/controllers/coordinates_controller.rb:19
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:19
+Redirected to http://localhost:3000/coordinates/22
+Completed 302 Found in 162ms (ActiveRecord: 36.1ms)
+
+
+Started GET "/coordinates/22" for 10.0.2.2 at 2019-07-20 09:16:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:28
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mItem Load (4.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 22]]
+  ↳ app/views/coordinates/show.html.erb:25
+  Rendered coordinates/show.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 1881ms (Views: 1773.6ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/attachments/ba475714b0f14017fdd358b8204d914039d424df/store/fill/600/500/e47ad9b170a717c43396948a3e0f2681c251dade3d62f5e671855f646b44/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-20 09:16:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/204a0aa54c98904e9b485ccc9cea0ebaf6a0ad26/store/fill/200/200/522ae1fe8c406df993830c1dfb0f2932b9778681bc3bf4da677894fd6a90/item_image.jpeg" for 10.0.2.2 at 2019-07-20 09:16:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/214dddb22bbc0156d390b9b03fb79f85d1e4c437/store/fill/200/200/b0ded493d2aa2e63671e64a505d7781c06142eeab1cae09cf790fecdc771/item_image.jpeg" for 10.0.2.2 at 2019-07-20 09:16:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-20 09:16:30 +0000] GET "/204a0aa54c98904e9b485ccc9cea0ebaf6a0ad26/store/fill/200/200/522ae1fe8c406df993830c1dfb0f2932b9778681bc3bf4da677894fd6a90/item_image.jpeg" 200 125.7ms
+
+Refile::App: [2019-07-20 09:16:30 +0000] GET "/214dddb22bbc0156d390b9b03fb79f85d1e4c437/store/fill/200/200/b0ded493d2aa2e63671e64a505d7781c06142eeab1cae09cf790fecdc771/item_image.jpeg" 200 168.9ms
+
+Refile::App: [2019-07-20 09:16:30 +0000] GET "/ba475714b0f14017fdd358b8204d914039d424df/store/fill/600/500/e47ad9b170a717c43396948a3e0f2681c251dade3d62f5e671855f646b44/coordinate_image.jpeg" 200 351.1ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-20 09:16:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 1919ms (Views: 1797.7ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/attachments/0f7bec932d3223e501a029a53f30d6c5a1bff72a/store/fill/200/200/e47ad9b170a717c43396948a3e0f2681c251dade3d62f5e671855f646b44/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-20 09:16:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-20 09:16:58 +0000] GET "/0f7bec932d3223e501a029a53f30d6c5a1bff72a/store/fill/200/200/e47ad9b170a717c43396948a3e0f2681c251dade3d62f5e671855f646b44/coordinate_image.jpeg" 200 132.1ms
+
+Started GET "/coordinates/22" for 10.0.2.2 at 2019-07-20 09:17:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (7.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:28
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mItem Load (4.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 22]]
+  ↳ app/views/coordinates/show.html.erb:25
+  Rendered coordinates/show.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 1956ms (Views: 1825.0ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/coordinates/21" for 10.0.2.2 at 2019-07-20 09:17:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:28
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mItem Load (3.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 21]]
+  ↳ app/views/coordinates/show.html.erb:25
+  Rendered coordinates/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 1832ms (Views: 1735.8ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/coordinates/20" for 10.0.2.2 at 2019-07-20 09:17:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:28
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mItem Load (4.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 20]]
+  ↳ app/views/coordinates/show.html.erb:25
+  Rendered coordinates/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 1912ms (Views: 1791.6ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/attachments/8442e7738b6b2749d319455d96c1fa4703818401/store/fill/600/500/804e0d0d6dbfb4b0c099b3a2fea7b02444731eafcab38c3781d341520240/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-20 09:17:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-20 09:17:16 +0000] GET "/8442e7738b6b2749d319455d96c1fa4703818401/store/fill/600/500/804e0d0d6dbfb4b0c099b3a2fea7b02444731eafcab38c3781d341520240/coordinate_image.jpeg" 200 472.2ms
+
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-20 09:32:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (54.4ms)
+Completed 500 Internal Server Error in 10092ms (ActiveRecord: 43.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'cocoonbu' with type 'application/javascript'
+Checked in these paths: 
+  /vagrant/imymemine/app/assets/config
+  /vagrant/imymemine/app/assets/images
+  /vagrant/imymemine/app/assets/javascripts
+  /vagrant/imymemine/app/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/cocoon-1.2.14/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /vagrant/imymemine/node_modules
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__777357792034062487_70322072988600'
+Started GET "/users/1/top" for 10.0.2.2 at 2019-07-20 09:34:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/top.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.0ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/top.html.erb:29
+  Rendered users/top.html.erb within layouts/application (52.7ms)
+Completed 500 Internal Server Error in 2930ms (ActiveRecord: 51.5ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'cocoonbu' with type 'application/javascript'
+Checked in these paths: 
+  /vagrant/imymemine/app/assets/config
+  /vagrant/imymemine/app/assets/images
+  /vagrant/imymemine/app/assets/javascripts
+  /vagrant/imymemine/app/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/cocoon-1.2.14/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /vagrant/imymemine/node_modules
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1265221303725556228_69924889166840'
+Started GET "/users/1" for 10.0.2.2 at 2019-07-20 09:35:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:41
+  Rendered users/show.html.erb within layouts/application (58.8ms)
+Completed 500 Internal Server Error in 1250ms (ActiveRecord: 24.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'cocoonbu' with type 'application/javascript'
+Checked in these paths: 
+  /vagrant/imymemine/app/assets/config
+  /vagrant/imymemine/app/assets/images
+  /vagrant/imymemine/app/assets/javascripts
+  /vagrant/imymemine/app/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/cocoon-1.2.14/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /vagrant/imymemine/node_modules
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1265221303725556228_69924904186680'
+Started GET "/" for 10.0.2.2 at 2019-07-20 09:35:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 880ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'cocoonbu' with type 'application/javascript'
+Checked in these paths: 
+  /vagrant/imymemine/app/assets/config
+  /vagrant/imymemine/app/assets/images
+  /vagrant/imymemine/app/assets/javascripts
+  /vagrant/imymemine/app/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/cocoon-1.2.14/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /vagrant/imymemine/node_modules
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /var/lib/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1265221303725556228_69924896393800'

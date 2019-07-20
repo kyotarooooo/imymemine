@@ -21,7 +21,7 @@ devise_for :users, controllers: {
 }
   resources :users, only:[:index, :show, :edit, :update]
 	resources :coordinates, only:[:index, :new, :show, :edit, :update, :destroy]
-  resources :items, only:[:index]
+  resources :items, only:[:index, :show]
   resources :messages, only:[:create]
   resources :rooms, only:[:create, :show, :index]
 

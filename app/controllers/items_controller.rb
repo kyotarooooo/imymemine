@@ -17,6 +17,10 @@ class ItemsController < ApplicationController
 	def index
 	end
 
+	def show
+		@item = Item.find(params[:id])
+	end
+
 	private
 	def item_params
 		params.require(:item).permit(:user_id, :category_id, :coordinate_id, :item_name, :item_image, :size, :brand, :color)
