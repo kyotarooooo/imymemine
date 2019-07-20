@@ -1,0 +1,31 @@
+<div class = "nested-fields well well-compact">
+	<div class = "field">
+    <%= f.attachment_field :item_image %>
+  </div>
+
+  <div class = "field">
+    <%= f.label :アイテム名 %><br />
+    <%= f.text_field :item_name %>
+  </div>
+
+  <div class = "field">
+    <%= f.label :ブランド %><br />
+    <%= f.text_field :brand %>
+  </div>
+
+  <div class = "field">
+    <%= f.label :サイズ %><br />
+        <%= f.select :size, [["XS", "XS"], ["S", "S"], ["M", "M"], ["L", "L"], ["XL", "XL"], ["FREE", "FREE"], ["その他", "その他"]] ,class:"form-control" %>
+  </div>
+
+  <div class = "field">
+    <%= f.label :カラー %><br />
+        <%= f.select :color, [["ホワイト", "ホワイト"], ["ブラック", "ブラック"], ["グレー", "グレー"], ["ブラウン", "ブラウン"], ["ベージュ", "ベージュ"], ["グリーン", "グリーン"], ["ブルー", "ブルー"], ["パープル", "パープル"], ["イエロー", "イエロー"], ["ピンク", "ピンク"], ["レッド", "レッド"], ["オレンジ", "オレンジ"], ["シルバー", "シルバー"], ["ゴールド", "ゴールド"], ["柄", "柄"], ["その他", "その他"]] ,class:"form-control" %>
+  </div>
+
+  <div class = "field">
+    <%= f.label :カラー %><br />
+        <%= f.select :color, [["トップス", "トップス"], ["ジャケット/アウター", "ジャケット/アウター"], ["パンツ", "パンツ"], ["スカート", "スカート"], ["オールインワン/サロペット", "オールインワン/サロペット"], ["ワンピーズ", "ワンピーズ"], ["スーツ/ネクタイ", "スーツ/ネクタイ"], ["バッグ", "バッグ"], ["シューズ", "シューズ"], ["アクセサリー", "アクセサリー"], ["レッグウェア", "レッグウェア"], ["帽子", "帽子"], ["アンダーウェア", "アンダーウェア"], ["時計", "時計"], ["その他", "その他"]] ,class:"form-control" %>
+  </div>
+  <%= link_to_remove_association "remove item", f %>
+</div>

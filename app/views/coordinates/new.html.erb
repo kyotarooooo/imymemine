@@ -1,5 +1,3 @@
-<h1>コーディネートを投稿する</h1>
-
 <div class="row field">
     <div class="col-xs-1"></div>
     <div class="col-xs-10">
@@ -14,6 +12,7 @@
 		<% end %>
 
 <!-- コーディネート登録 -->
+<h3>コーディネートを投稿する</h3>
 <%= form_for(@coordinate) do |f| %>
 	<div class = "field">
 		<%= f.attachment_field :coordinate_image %>
@@ -25,44 +24,17 @@
 	</div>
 
 <!-- アイテム登録 -->
-<%= f.fields_for :items do |item_fields| %>
-	<div class = "field">
-		<%= item_fields.attachment_field :item_image %>
-	</div>
+<h3>アイテムを登録する</h3>
+<div id = "items">
+	<%= f.fields_for :items do |item_fields| %>
+		<%= render 'item_fields', f: item_fields %>
+	<% end %>
+	<div id = "links">
 
-	<div class = "field">
-		<%= item_fields.label :アイテム名 %><br />
-		<%= item_fields.text_field :item_name %>
+		<%= link_to_add_association 'add item',f, :items %>
 	</div>
-
-	<div class = "field">
-		<%= item_fields.label :ブランド %><br />
-		<%= item_fields.text_field :brand %>
-	</div>
-
-	<div class = "field">
-		<%= item_fields.label :サイズ %><br />
-        <%= item_fields.select :size, [["XS", "XS"], ["S", "S"], ["M", "M"], ["L", "L"], ["XL", "XL"], ["FREE", "FREE"], ["その他", "その他"]] ,class:"form-control" %>
-	</div>
-
-	<div class = "field">
-		<%= item_fields.label :カラー %><br />
-        <%= item_fields.select :color, [["ホワイト", "ホワイト"], ["ブラック", "ブラック"], ["グレー", "グレー"], ["ブラウン", "ブラウン"], ["ベージュ", "ベージュ"], ["グリーン", "グリーン"], ["ブルー", "ブルー"], ["パープル", "パープル"], ["イエロー", "イエロー"], ["ピンク", "ピンク"], ["レッド", "レッド"], ["オレンジ", "オレンジ"], ["シルバー", "シルバー"], ["ゴールド", "ゴールド"], ["柄", "柄"], ["その他", "その他"]] ,class:"form-control" %>
-	</div>
-
-	<div class = "field">
-		<%= item_fields.label :カラー %><br />
-        <%= item_fields.select :color, [["トップス", "トップス"], ["ジャケット/アウター", "ジャケット/アウター"], ["パンツ", "パンツ"], ["スカート", "スカート"], ["オールインワン/サロペット", "オールインワン/サロペット"], ["ワンピーズ", "ワンピーズ"], ["スーツ/ネクタイ", "スーツ/ネクタイ"], ["バッグ", "バッグ"], ["シューズ", "シューズ"], ["アクセサリー", "アクセサリー"], ["レッグウェア", "レッグウェア"], ["帽子", "帽子"], ["アンダーウェア", "アンダーウェア"], ["時計", "時計"], ["その他", "その他"]] ,class:"form-control" %>
-	</div>
-
-<% end %>
-
-	<div class = "field">
-		<%= f.submit "投稿する" %>
-	</div>
-<% end %>
-    </div>
-    <div class="col-xs-1"></div>
+	<%= f.submit "投稿する" %>
 </div>
+<% end %>
 
 <div class = "space"></div>

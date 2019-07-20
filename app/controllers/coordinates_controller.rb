@@ -66,7 +66,7 @@ class CoordinatesController < ApplicationController
 
   private
   def coordinate_params
-  	params.require(:coordinate).permit(:coordinate_image, :body, items_attributes: [:item_image, :item_name, :size, :brand, :color, :category_name])
+  	params.require(:coordinate).permit(:coordinate_image, :body, items_attributes: [:item_image, :item_name, :size, :brand, :color, :category_name, :_destroy])
   end
 end
 
