@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
 	root "homes#about"
 	get "users/:id/top/" => "users#top", as: "mypage"
-  get "inquiry" => "inquiry#index" #入力画面
-  post "inquiry/confirm" => "inquiry#confirm" #確認画面
-  post "inquiry/thanks" => "inquiry#thanks" #送信完了画面
   get "coordinates/mens" => "coordinates#mens_coordinate", as: "mens"
   get "coordinates/ladies" => "coordinates#ladies_coordinate", as: "ladies"
+  get "coordinates/search" => "coordinates#search"
+  post "coordinates" => "coordinates#create"
+  post "items" => "items#create"
 
 
 devise_for :admins, controllers: {
@@ -19,8 +19,11 @@ devise_for :users, controllers: {
   	passwords:     'users/passwords',
   	registrations: 'users/registrations'
 }
-	resources :coordinates, only:[:new, :create, :index, :show, :edit, :update, :destroy]
-	resources :users, only:[:index, :show, :edit, :update]
+  resources :users, only:[:index, :show, :edit, :update]
+	resources :coordinates, only:[:index, :new, :show, :edit, :update, :destroy]
+  resources :items, only:[:index]
+  resources :messages, only:[:create]
+  resources :rooms, only:[:create, :show, :index]
 
 
 namespace :admins do

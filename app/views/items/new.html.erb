@@ -1,0 +1,47 @@
+<h1>アイテムの登録</h1>
+
+<div class="row field">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+    	<% if @item.errors.any? %>
+			<div id = "error_explanation" class = "alert alert-danger">
+			<ul>
+			<% @item.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+			</ul>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+<%= form_for(@item) do |f| %>
+	<div class = "field">
+		<%= f.attachment_field :item_image %>
+	</div>
+
+	<div class = "field">
+		<%= f.label :item_name %></br>
+		<%= f.text_field :item_name, :size=>"120x20", autofocus: true, autocomplete: "item_name" %>
+	</div>
+
+	<div class = "field">
+		<%= f.label :size %></br>
+		<%= f.text_field :size, :size=>"120x20", autofocus: true, autocomplete: "size" %>
+	</div>
+
+	<div class = "field">
+		<%= f.label :brand %></br>
+		<%= f.text_field :brand, :size=>"120x20", autofocus: true, autocomplete: "brand" %>
+	</div>
+
+	<div class = "field">
+		<%= f.label :color %></br>
+		<%= f.text_field :color, :size=>"120x20", autofocus: true, autocomplete: "color" %>
+	</div>
+
+	<div class = "field">
+		<%= f.submit "投稿する" %>
+	</div>
+<% end %>

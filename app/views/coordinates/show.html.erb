@@ -6,8 +6,6 @@
 <div class = "coordeinate_index2">
 	<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 600, 500, format: 'jpeg' %>
 </div>
-
-
 <div class="row field">
     <div class="col-xs-2"></div>
     <div class="col-xs-8">
@@ -21,4 +19,12 @@
     </div>
     <div class="col-xs-2"></div>
 </div>
+<div class = "space"></div>
 
+<!-- コーディネートに紐づいたアイテムを登録 -->
+<% @items.each do |item| %>
+    <%= attachment_image_tag item, :item_image, :fill, 200, 200, format: 'jpeg' %>
+    <%= item.item_name %>
+<% end %>
+
+<div class = "space"></div>

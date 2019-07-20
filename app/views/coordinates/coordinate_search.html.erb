@@ -1,0 +1,21 @@
+<h1>コーディネート一覧</h1>
+<h3>"<%= params[:search] %>の検索結果"</h3>
+
+
+		<table class="table table-hover table-inverse">
+			<thead>
+				<th></th>
+				<th>本文</th>
+			</thead>
+			<!-- コーディネートの検索結果 -->
+			<% @coordinates.each do |coordinate| %>
+					<tbody>
+						<tr data-href=<%= coordinate_path(coordinate) %>>
+						<td>
+							<%= attachment_image_tag coordinate, :coordinate_image, :fill, 100, 100 %>
+							<%= coordinate.body %>
+						</td>
+					    </tr>
+					</tbody>
+			<% end %>
+		</table>

@@ -1,0 +1,6 @@
+<!-- コーディネートの検索結果 -->
+<h1><%= params[:search] %>の検索結果</h1>
+
+<% @coordinates.each do |coordinate| %>
+	<%= attachment_image_tag coordinate, :coordinate_image, :fill, 100, 100, format: 'jpeg' %>
+<% end %>

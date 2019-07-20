@@ -14,8 +14,13 @@
       <% if user_signed_in? %>
         <div class="page-header">
           <h1><%= link_to "m.m.m.", root_path %>
-            <small>ようこそ <%= current_user.user_name %> さん。</small>
+            <small class="navbar-right search">ようこそ <%= current_user.user_name %> さん。</small>
           </h1>
+            <!-- 検索フォーム -->
+            <%= form_tag(coordinates_search_path,:method => 'get') do %>
+              <%= text_field_tag :search,  "",class:"serch-form", placeholder: "コーディネート検索" %>
+              <%= submit_tag '検索', :name => nil%>
+            <% end %>
         </div>
       <% elsif admin_signed_in? %>
         <div class="page-header">
@@ -30,6 +35,10 @@
           </h1>
         </div>
       <% end %>
+
+
+
+
     </header>
     <div class = "flash">
       <%= flash[:notice] %>
@@ -44,7 +53,6 @@
           <li class="active"><%= link_to "ユーザー一覧", users_path %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <li class="active"><%= link_to "マイページ", mypage_path(current_user.id) %></li>
-          <li><%= link_to "お問い合わせ", inquiry_path %></li>
         </ul>
         <% elsif admin_signed_in? %>
         <ul class="nav navbar-nav">
@@ -55,7 +63,6 @@
           <li><%= link_to "コーディネート一覧", coordinates_path %></li>
           <li class="active"><%= link_to "新規登録", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>
-          <li><%= link_to "お問い合わせ", inquiry_path %></li>
         </ul>
         <% end %>
       </div>

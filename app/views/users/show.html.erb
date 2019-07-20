@@ -9,6 +9,27 @@
         <p>性別 : <%= @user.sex %></p>
         <p>身長 : <%= @user.height %></p>
     	<%= @user.introduction %>
+
+        <!-- ここからチャット画面へ遷移 -->
+        <% if @user.id == current_user.id %>
+        <!-- 何も表示させない -->
+        <% else %>
+            <% if @isRoom == true %>
+                <%= link_to "チャットへ", room_path(@roomId) %>
+            <% else %>
+                <%= form_for @room do |f| %>
+                    <%= fields_for @entry do |e| %>
+                        <%= e.hidden_field :user_id, :value => @user.id %>
+                    <% end %>
+                    <%= f.submit "チャットを始める" %>
+                <% end %>
+            <% end %>
+        <% end %>
+        <!-- チャットはここまで -->
+
+
+
+
     	</div>
     <div class="col-xs-1"></div>
 </div>

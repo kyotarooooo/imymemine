@@ -10,14 +10,15 @@ class CoordinatesController < ApplicationController
 
   def new
   	@coordinate = Coordinate.new
+    @item = @coordinate.items.build
   end
 
   def create
   	@coordinate = Coordinate.new(coordinate_params)
-  	@coordinate.user_id = current_user.id
+    @coordinate.user = current_user
   	if @coordinate.save
        flash[:notice] = "投稿しました。"
-  	   redirect_to mypage_path(current_user)
+  	   redirect_to coordinate_path(@coordinate.id)
     else
        render 'coordinates/new'
     end
@@ -25,6 +26,7 @@ class CoordinatesController < ApplicationController
 
   def show
   	@coordinate = Coordinate.find(params[:id])
+    @items = Item.where(coordinate_id: @coordinate.id)
   end
 
   def edit
@@ -58,8 +60,13 @@ class CoordinatesController < ApplicationController
     @coordinates = Coordinate.where(user_id: @users)
   end
 
+  def search
+    @coordinates = Coordinate.search(params[:search])
+  end
+
   private
   def coordinate_params
-  	params.require(:coordinate).permit(:coordinate_image, :body)
+  	params.require(:coordinate).permit(:coordinate_image, :body, items_attributes: [:item_image, :item_name, :size, :brand, :color, :category_name])
   end
 end
+
