@@ -1,15 +1,7 @@
-<div class="row user_login_signup">
+<div class="row user_login">
     <div class="col-xs-2"></div>
-    <div class="col-xs-8">
-      <h2>ログイン</h2>
-      男
-      メールqqq@qqq.com
-      パス111111
-
-
-      女
-      メールaaa@aaa.com
-      パス111111
+    <div class="col-xs-8 login_box">
+      <h2 class = "login_font">ログイン</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
@@ -22,19 +14,14 @@
           <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
 
-        <% if devise_mapping.rememberable? %>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
+        <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
+          <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
         <% end %>
-
-        <div class="actions">
-          <%= f.submit "ログイン" %>
-        </div>
       <% end %>
 
-      <%= render "users/shared/links" %>
+      <div class="field">
+        <%= render "users/shared/links" %>
+      </div>
     </div>
     <div class="col-xs-2"></div>
 </div>

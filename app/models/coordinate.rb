@@ -1,4 +1,8 @@
 class Coordinate < ApplicationRecord
+
+	default_scope -> { order(created_at: :desc) }
+
+
 	belongs_to :user
 	has_many :items, inverse_of: :coordinate
 	accepts_nested_attributes_for :items, reject_if: :all_blank, allow_destroy: true
