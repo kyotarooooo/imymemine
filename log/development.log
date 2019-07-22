@@ -15535,3 +15535,300 @@ Processing by CoordinatesController#show as HTML
 Completed 200 OK in 1902ms (Views: 1796.1ms | ActiveRecord: 22.6ms)
 
 
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:16:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:24
+  Rendered coordinates/index.html.erb within layouts/application (34.9ms)
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 6504ms (Views: 6248.9ms | ActiveRecord: 60.7ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:17:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:25
+  Rendered coordinates/index.html.erb within layouts/application (30.4ms)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 2026ms (Views: 1904.5ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:21:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  Rendered coordinates/index.html.erb within layouts/application (185.0ms)
+Completed 500 Internal Server Error in 509ms (ActiveRecord: 7.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Coordinate:0x00007f37351500b8>):
+    12: <!-- 左にジャンルごと、右にランキング -->
+    13: <p>ランキング</p>
+    14: <% @all_ranks.each.with_index(1) do |coordinate, i| %>
+    15: 	<% 第 = i位 = coordinate.title %>
+    16: 	<%= i.coordinate.title %>
+    17: 	<%= link_to coordinate_path(coordinate.id) do %>
+    18: 		<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 250, format: 'jpeg' %>
+  
+app/views/coordinates/index.html.erb:15:in `block in _app_views_coordinates_index_html_erb__3228519657380704320_69937545202180'
+app/views/coordinates/index.html.erb:14:in `each'
+app/views/coordinates/index.html.erb:14:in `with_index'
+app/views/coordinates/index.html.erb:14:in `_app_views_coordinates_index_html_erb__3228519657380704320_69937545202180'
+Started GET "/users" for 10.0.2.2 at 2019-07-22 07:21:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 1969ms (Views: 1868.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:21:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:25
+  Rendered coordinates/index.html.erb within layouts/application (27.6ms)
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:21:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (4.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:25
+  Rendered coordinates/index.html.erb within layouts/application (31.1ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 2157ms (Views: 2055.4ms | ActiveRecord: 14.7ms)
+
+
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1802ms (Views: 1692.3ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:22:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  Rendered coordinates/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 372ms (ActiveRecord: 9.2ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/coordinates/index.html.erb:14: syntax error, unexpected ',', expecting keyword_end
+...ll_ranks.each　do |coordinate, i| 
+...                              ^
+/vagrant/imymemine/app/views/coordinates/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/coordinates/index.html.erb:14: syntax error, unexpected ',', expecting keyword_end
+app/views/coordinates/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:23:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (4.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  Rendered coordinates/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 7.9ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/coordinates/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/coordinates/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:23:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:25
+  Rendered coordinates/index.html.erb within layouts/application (35.1ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1766ms (Views: 1665.7ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:28:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (3.6ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  Rendered coordinates/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 8.5ms)
+
+
+  
+SyntaxError (/vagrant/imymemine/app/views/coordinates/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/coordinates/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:29:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (5.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (5.3ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:26
+  Rendered coordinates/index.html.erb within layouts/application (28.7ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1967ms (Views: 1840.5ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/coordinates/12" for 10.0.2.2 at 2019-07-22 07:29:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (3.9ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:30
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mLike Exists (4.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."coordinate_id" = ? LIMIT ?[0m  [["user_id", 1], ["coordinate_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."coordinate_id" = ?[0m  [["coordinate_id", 12]]
+  ↳ app/views/coordinates/show.html.erb:15
+  [1m[36mItem Load (4.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 12]]
+  ↳ app/views/coordinates/show.html.erb:33
+  Rendered coordinates/show.html.erb within layouts/application (63.8ms)
+Completed 200 OK in 2159ms (Views: 1856.4ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/attachments/7a8d916c321fccb8961460828db0af2e6237a8c6/store/fill/600/500/490099a15a117197c7b60c4fdc62d4f551292f04cb7b6bb6c266cad91a60/coordinate_image.jpeg" for 10.0.2.2 at 2019-07-22 07:29:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-07-22 07:29:22 +0000] GET "/7a8d916c321fccb8961460828db0af2e6237a8c6/store/fill/600/500/490099a15a117197c7b60c4fdc62d4f551292f04cb7b6bb6c266cad91a60/coordinate_image.jpeg" 200 240.9ms
+
+Started POST "/coordinates/12/likes" for 10.0.2.2 at 2019-07-22 07:29:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"5sEqbKZsnLnzlP9x+ddbVoyt8OK0Df08HwU6f3arVdXMZV6kzvx/vo3yteS4KmtZ0QhJTK/rx8Y1iO1Rh/patQ==", "coordinate_id"=>"12"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[36mCoordinate Load (4.0ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."coordinate_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["coordinate_id", 12], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[36mLike Create (15.7ms)[0m  [1m[32mINSERT INTO "likes" ("coordinate_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coordinate_id", 12], ["user_id", 1], ["created_at", "2019-07-22 07:29:24.308151"], ["updated_at", "2019-07-22 07:29:24.308151"]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:4
+Redirected to http://localhost:3000/coordinates/12
+Completed 302 Found in 74ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/coordinates/12" for 10.0.2.2 at 2019-07-22 07:29:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22
+  [1m[36mCoordinate Load (4.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/coordinates_controller.rb:30
+  Rendering coordinates/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/coordinates/show.html.erb:2
+  [1m[36mLike Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."coordinate_id" = ? LIMIT ?[0m  [["user_id", 1], ["coordinate_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."coordinate_id" = ?[0m  [["coordinate_id", 12]]
+  ↳ app/views/coordinates/show.html.erb:15
+  [1m[36mItem Load (4.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."coordinate_id" = ?[0m  [["coordinate_id", 12]]
+  ↳ app/views/coordinates/show.html.erb:33
+  Rendered coordinates/show.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 1768ms (Views: 1656.6ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-22 07:29:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(coordinate_id)desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/imymemine/app/controllers/coordinates_controller.rb:10)
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT  "likes"."coordinate_id" FROM "likes" GROUP BY "likes"."coordinate_id" ORDER BY count(coordinate_id)desc LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  [1m[36mCoordinate Load (5.4ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates" WHERE "coordinates"."id" IN (?, ?)[0m  [["id", 1], ["id", 12]]
+  ↳ app/controllers/coordinates_controller.rb:10
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (4.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:26
+  Rendered coordinates/index.html.erb within layouts/application (30.2ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1988ms (Views: 1850.5ms | ActiveRecord: 18.2ms)
+
+
+  [1m[36mCoordinate Load (4.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.7ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.5ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.2ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.1ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.4ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCoordinate Load (3.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" WHERE "coordinates"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]

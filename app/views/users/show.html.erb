@@ -10,6 +10,8 @@
         <p>身長 : <%= @user.height %></p>
     	<%= @user.introduction %>
 
+        <!-- ユーザーお気に入り機能 -->
+
         <!-- ここからチャット画面へ遷移 -->
         <% if @user.id == current_user.id %>
         <!-- 何も表示させない -->
