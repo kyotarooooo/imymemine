@@ -6,6 +6,8 @@ class CoordinatesController < ApplicationController
 
   def index
   	@coordinates = Coordinate.all
+    #いいね順に記事をランキングでとってくる
+    @all_ranks = Coordinate.find(Like.group(:coordinate_id).order('count(coordinate_id)desc').limit(3).pluck(:coordinate_id))
   end
 
   def new

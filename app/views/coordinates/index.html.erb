@@ -9,6 +9,15 @@
     <div class="col-xs-1"></div>
 </div>
 
+<!-- 左にジャンルごと、右にランキング -->
+<p>ランキング</p>
+<% @all_ranks.each.with_index(1) do |coordinate, i| %>
+	<%= "第#{i}位" %>
+	<%= link_to coordinate_path(coordinate.id) do %>
+		<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 250, format: 'jpeg' %>
+	<% end %>
+<% end %>
+
 
 <div class="row field">
     <div class="col-xs-1"></div>
