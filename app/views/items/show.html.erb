@@ -1,8 +1,20 @@
 <h1>アイテム詳細</h1>
 
-<%= attachment_image_tag @item, :item_image, :fill, 350, 350, format: 'jpeg' %>
-<%= @item.item_name %>
-<%= @item.brand %>
-<%= @item.color %>
-<%= @item.size %>
-<%= @item.category_name %>
+<div class = "field">
+	<%= attachment_image_tag @item, :item_image, :fill, 350, 350, format: 'jpeg' %>
+</div>
+<div class = "field">
+	<p>アイテム名 :<%= @item.item_name %></p>
+</div>
+<div class = "field">
+	<p>ブランド :<%= @item.brand %></p>
+</div>
+<div class = "field">
+	<p>カラー :<%= @item.color %></p>
+</div>
+<div class = "field">
+	<p>サイズ :<%= @item.size %></p>
+</div>
+<div class = "field">
+	<p>カテゴリー :<%= @item.category_name %></p>
+</div>

@@ -7,6 +7,10 @@ class Coordinate < ApplicationRecord
 	validates :coordinate_image, presence: true
 	validates :body, presence: true
 
+	#いいね機能
+	has_many :likes
+	has_many :liked_users, through: :likes, source: :user
+
 	def self.search(search)
 		if search
 			Coordinate.where(['body LIKE ?', "%#{search}%"])

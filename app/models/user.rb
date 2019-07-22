@@ -14,6 +14,15 @@ class User < ApplicationRecord
   validates :kana_name, format: { with: /\A[ァ-ヶー－]+\z/ }
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
 
+  #いいね機能
+  has_many :coordinates, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_coordinates, through: :likes, source: :coordinate
+
+  def already_liked?(coordinate)
+    self.likes.exists?(coordinate_id: coordinate.id)
+  end
+
   def self.search(search)
     if search
       User.where(['user_name LIKE ?', "%#{search}%"])

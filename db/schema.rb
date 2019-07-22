@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_20_064121) do
+ActiveRecord::Schema.define(version: 2019_07_22_061122) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -63,6 +63,15 @@ ActiveRecord::Schema.define(version: 2019_07_20_064121) do
     t.string "color"
     t.integer "coordinate_id"
     t.string "category_name"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "coordinate_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coordinate_id"], name: "index_likes_on_coordinate_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|

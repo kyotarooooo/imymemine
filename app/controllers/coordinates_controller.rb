@@ -27,6 +27,7 @@ class CoordinatesController < ApplicationController
   def show
   	@coordinate = Coordinate.find(params[:id])
     @items = Item.where(coordinate_id: @coordinate.id)
+    @like = Like.new
   end
 
   def edit
