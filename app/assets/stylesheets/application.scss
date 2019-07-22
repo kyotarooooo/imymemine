@@ -18,10 +18,6 @@
 
 
 ////////////////////共通//////////////////////////////////////////////////////////////////////////////////////////////////
-.space{
-	width: 100%;
-	height: 150px;
-}
 
 
 label{
@@ -30,10 +26,6 @@ label{
 
 li {
 	list-style: none;
-}
-
-.error_message{
-	color: #fff;
 }
 
 
@@ -128,3 +120,62 @@ em{
 .user_show2{
 	padding: 20px 0;
 }
+
+.coordinate_show{
+	background-image: url("img4.jpg");
+	background-size: 100% 100%;
+	height: 800px;
+	padding-top: 100px;
+}
+
+
+
+
+////////////////////コーディネート新規投稿ページ///////////////////////////////////////////////////////////////////////////////////////////////
+.coordinate_new{
+	background-image: url("img7.jpg");
+	background-size: 100% 100%;
+	height: 100%;
+	padding-top: 30px;
+	padding-bottom: 100px;
+}
+
+.coordinate_new2{
+	background-color: rgba( 255, 255, 255, 0.5);
+	padding: 5px 20px 20px 20px;
+}
+
+.well-compact{
+	background-color: #000;
+}
+
+textarea{
+	background-color: #000;
+	color: #fff;
+}
+
+////////////////////ユーザー一覧ページ//////////////////////////////////////////////////////////////////////////////////////////////////
+.user_index{
+	background-image: url("img6.jpg");
+	background-size: 100% 100%;
+	height: 1600px;
+	padding-top: 100px;
+}
+
+
+///////////////////ユーザー編集ページ//////////////////////////////////////////////////////////////////////////////////////////////////
+.user_edit{
+	background-image: url("img8.jpg");
+	background-size: 100% 100%;
+	height: 1400px;
+	padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :authenticate_user!
-
+  PER = 15
 
 
   def top
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  	@users = User.all
+  	@users = User.page(params[:page]).per(PER)
   end
 
 

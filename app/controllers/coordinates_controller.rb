@@ -1,11 +1,11 @@
 class CoordinatesController < ApplicationController
 
   before_action :user_login_check, only: [:new, :create, :edit, :update, :show]
-
+  PER = 9
 
 
   def index
-  	@coordinates = Coordinate.all
+  	@coordinates = Coordinate.page(params[:page]).per(PER)
     #いいね順に記事をランキングでとってくる
     @all_ranks = Coordinate.find(Like.group(:coordinate_id).order('count(coordinate_id)desc').limit(3).pluck(:coordinate_id))
   end

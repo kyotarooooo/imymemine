@@ -1,6 +1,6 @@
-<div class="row field">
+<div class="row coordinate_new">
     <div class="col-xs-1"></div>
-    <div class="col-xs-10">
+    <div class="col-xs-10 coordinate_new2">
     	<% if @coordinate.errors.any? %>
 			<div id = "error_explanation" class = "alert alert-danger">
 			<ul>
@@ -12,7 +12,7 @@
 		<% end %>
 
 <!-- コーディネート登録 -->
-<h3>コーディネートを投稿する</h3>
+<h3 class = "font">コーディネートを投稿する</h3>
 <%= form_for(@coordinate) do |f| %>
 	<div class = "field">
 		<%= f.attachment_field :coordinate_image %>
@@ -20,11 +20,11 @@
 
 	<div class = "field">
 		<%= f.label :本文 %></br>
-		<%= f.text_area :body, :size=>"120x20", autofocus: true, autocomplete: "body" %>
+		<%= f.text_area :body, :size=>"100x10", autofocus: true, autocomplete: "body" %>
 	</div>
 
 <!-- アイテム登録 -->
-<h3>アイテムを登録する</h3>
+<h3 class = "font">アイテムを登録する</h3>
 <div id = "items">
 	<%= f.fields_for :items do |item_fields| %>
 		<%= render 'item_fields', f: item_fields %>
@@ -36,5 +36,4 @@
 	<%= f.submit "投稿する" %>
 </div>
 <% end %>
-
-<div class = "space"></div>
+</div>

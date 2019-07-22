@@ -1,72 +1,78 @@
-<h1>ユーザー情報の編集</h1>
-
-<% if @user.errors.any? %>
-  <div id = "error_explanation" class = "alert alert-danger">
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+<div class = "user_edit">
+  <div class="row field">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10">
+        <h1 class = "font">ユーザー情報の編集</h1>
+      </div>
+      <div class="col-xs-1"></div>
   </div>
-<% end %>
 
-
-<div class="row field">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-10">
-      <%= form_for(@user) do |f| %>
-        <div class = "field">
-          <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
-          <%= f.attachment_field :profile_image %>
-        </div>
+  <% if @user.errors.any? %>
+    <div id = "error_explanation" class = "alert alert-danger">
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     </div>
-    <div class="col-xs-1"></div>
-</div>
+  <% end %>
 
 
-<div class="row field">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-10">
-
-      <div class = "field">
-    <%= f.text_area :introduction, :size=>"92", autofocus: true, autocomplete: "body" %>
+  <div class="row field">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10">
+        <%= form_for(@user) do |f| %>
+          <div class = "field">
+            <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
+            <%= f.attachment_field :profile_image %>
+          </div>
+      </div>
+      <div class="col-xs-1"></div>
   </div>
 
-  <div class="field">
-    <%= f.label :氏名（漢字） %><br />
-    <%= f.text_field :kanji_name, autofocus: true, autocomplete: "kanji_name" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :氏名（カナ） %><br />
-    <%= f.text_field :kana_name, autofocus: true, autocomplete: "kana_name" %>
-  </div>
+  <div class="row field">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10">
 
-  <div class="field">
-    <%= f.label :ユーザー名 %><br />
-    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-      <%= f.label :性別 %><br />
-      <%= f.select :sex, [["男性", "男性"], ["女性", "女性"]] ,class:"form-control" %>
+        <div class = "field">
+      <%= f.text_area :introduction, :size=>"100", autofocus: true, autocomplete: "body" %>
     </div>
 
     <div class="field">
-    <%= f.label :身長 %><br />
-    <p><%= f.select :height, [["~150", "~150"], ["150~155", "150~155"], ["155~160", "155~160"], ["165~170", "165~170"], ["170~175", "170~175"], ["175~180", "175~180"], ["180~185", "180~185"], ["185~190", "185~190"], ["190~", "190~"]] ,class:"form-control" %>cm</p>
-  </div>
-  <div class = "field">
-    <%= f.submit "投稿する" %>
-  </div>
-<% end %>
+      <%= f.label :氏名（漢字） %><br />
+      <%= f.text_field :kanji_name, autofocus: true, autocomplete: "kanji_name" %>
     </div>
-    <div class="col-xs-1"></div>
-</div>
 
-<div class = "space"></div>
+    <div class="field">
+      <%= f.label :氏名（カナ） %><br />
+      <%= f.text_field :kana_name, autofocus: true, autocomplete: "kana_name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :ユーザー名 %><br />
+      <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メールアドレス %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :性別 %><br />
+        <%= f.select :sex, [["男性", "男性"], ["女性", "女性"]] ,class:"form-control" %>
+      </div>
+
+      <div class="field">
+      <%= f.label :身長 %><br />
+      <%= f.select :height, [["~150cm", "~150cm"], ["150~155cm", "150~155cm"], ["155~160cm", "155~160cm"], ["165~170cm", "165~170cm"], ["170~175cm", "170~175cm"], ["175~180cm", "175~180cm"], ["180~185cm", "180~185cm"], ["185~190cm", "185~190cm"], ["190cm~", "190cm~"]] ,class:"form-control" %>
+    </div>
+    <div class = "field">
+      <%= f.submit "更新する" %>
+    </div>
+  <% end %>
+      </div>
+      <div class="col-xs-1"></div>
+  </div>
+</div>
