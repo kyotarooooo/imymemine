@@ -1,6 +1,15 @@
-<!-- コーディネートの検索結果 -->
-<h1><%= params[:search] %>の検索結果</h1>
-
-<% @coordinates.each do |coordinate| %>
-	<%= attachment_image_tag coordinate, :coordinate_image, :fill, 100, 100, format: 'jpeg' %>
-<% end %>
+<div class="row search1">
+	<div class="col-xs-1"></div>
+		<div class="col-xs-10">
+			<h1 class = "font">"<%= params[:search] %>"の検索結果</h1>
+			<div class = "search2">
+			<% @coordinates.each do |coordinate| %>
+				<%= attachment_image_tag coordinate, :coordinate_image, :fill, 300, 350, format: 'jpeg' %>
+			<% end %>
+			<div class = "search3">
+				<%= paginate @coordinates %>
+			</div>
+			</div>
+		</div>
+	<div class="col-xs-1"></div>
+</div>

@@ -1,13 +1,16 @@
-<div class="row field">
+<div class="row index1">
     <div class="col-xs-1"></div>
     <div class="col-xs-10">
-    	<div class = "coordinate_index">
-    	<% @coordinates.each do |coordinate| %>
-			<%= link_to coordinate_path(coordinate.id) do %>
-				<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 250, format: 'jpeg' %>
-			<% end %>
-		<% end %>
-		</div>
+        <div class = "index2">
+        <% @coordinates.each do |coordinate| %>
+            <%= link_to coordinate_path(coordinate.id) do %>
+                <%= attachment_image_tag coordinate, :coordinate_image, :fill, 300, 350, format: 'jpeg' %>
+            <% end %>
+        <% end %>
+        <div class = "index3">
+            <%= paginate @coordinates %>
+        </div>
+        </div>
     </div>
     <div class="col-xs-1"></div>
 </div>

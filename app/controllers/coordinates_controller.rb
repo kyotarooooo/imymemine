@@ -1,7 +1,7 @@
 class CoordinatesController < ApplicationController
 
   before_action :user_login_check, only: [:new, :create, :edit, :update, :show]
-  PER = 9
+  PER = 20
 
 
   def index
@@ -55,16 +55,16 @@ class CoordinatesController < ApplicationController
 
   def mens_coordinate
     @users = User.where(sex: "男性")
-    @coordinates = Coordinate.where(user_id: @users)
+    @coordinates = Coordinate.where(user_id: @users).page(params[:page]).per(PER)
   end
 
   def ladies_coordinate
     @users = User.where(sex: "女性")
-    @coordinates = Coordinate.where(user_id: @users)
+    @coordinates = Coordinate.where(user_id: @users).page(params[:page]).per(PER)
   end
 
   def search
-    @coordinates = Coordinate.search(params[:search])
+    @coordinates = Coordinate.search(params[:search]).page(params[:page]).per(PER)
   end
 
   private

@@ -1,40 +1,92 @@
 <div class = "coordinate_show">
-<h1 class = "font">ユーザーコーディネート詳細</h1>
-	<%= link_to user_path(@coordinate.user.id) do %>
-	<%= attachment_image_tag @coordinate.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'100x100', class: 'img-circle profile-thumb my-img edit-img' %>
-	<% end %>
-	<span class = "coordeinate_index"><%= @coordinate.user.user_name %></p>
-<div class = "coordeinate_index2">
-	<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 600, 500, format: 'jpeg' %>
 
-    <!-- いいね機能 -->
-    <% if current_user.already_liked?(@coordinate) %>
-        <%= button_to "いいねを取り消す", coordinate_like_path(@coordinate), method: :delete %>
-    <% else %>
-        <%= button_to "いいね!", coordinate_likes_path(@coordinate) %>
-    <% end %>
-    <p><%= @coordinate.likes.count %>人が「いいね!」しました。</p>
-</div>
-<div class="row field">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-8">
-    	<div class = "coordeinate_index3">
-    	<%= @coordinate.body %></br>
-    	<% if @coordinate.user_id == current_user.id %>
-    		<%= link_to "編集", edit_coordinate_path(@coordinate.id) %>
-			<%= link_to "削除", coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" %>
-		<% end %>
-    	</div>
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <h1 class = "coordinate_show_font">ユーザーコーディネート詳細</h1>
+        </div>
+        <div class="col-xs-1"></div>
     </div>
-    <div class="col-xs-2"></div>
-</div>
-<div class = "space"></div>
+        <!-- ユーザーのアイコンとユーザー名 -->
 
-<!-- コーディネートに紐づいたアイテムを登録 -->
-<% @items.each do |item| %>
-    <%= link_to item_path(item) do %>
-        <%= attachment_image_tag item, :item_image, :fill, 200, 200, format: 'jpeg' %>
-    <% end %>
-        <%= item.item_name %>
-<% end %>
+
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10 coordinate_show4">
+                <div class = "coordinate_show2">
+                    <%= link_to user_path(@coordinate.user.id) do %>
+                       <%= attachment_image_tag @coordinate.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'100x100', class: 'img-circle profile-thumb my-img edit-img' %>
+                    <% end %>
+                    <font class = "coordinate_show_font2" color = "#fff"><%= @coordinate.user.user_name %></font>
+                </div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <!-- ここまで -->
+
+
+        <!-- コーデ -->
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10 coordinate_show5">
+                <%= attachment_image_tag @coordinate, :coordinate_image, :fill, 700, 750, format: 'jpeg' %>
+                <!-- いいね機能 -->
+                <% if current_user.already_liked?(@coordinate) %>
+                    <%= button_to "いいねを取り消す", coordinate_like_path(@coordinate), method: :delete %>
+                <% else %>
+                    <%= button_to "いいね!", coordinate_likes_path(@coordinate) %>
+                <% end %>
+                <p><%= @coordinate.likes.count %>人が「いいね!」しました。</p>
+
+                <div class = "coordinate_show7">
+                <p class = "coordinate_show_font"><%= @coordinate.body %></p>
+                </div>
+                </br>
+
+
+                <% if @coordinate.user_id == current_user.id %>
+                    <%= link_to "編集", edit_coordinate_path(@coordinate.id) %>
+                    <%= link_to "削除", coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" %>
+                <% end %>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+
+
+
+    <!-- コーディネートに紐づいたアイテムを登録 -->
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <h3 class = "font">アイテム</h3>
+            <div class = "coordinate_show6">
+                <% @items.each do |item| %>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class = "coordinate_show_font">アイテム名</th>
+                                <th class = "coordinate_show_font">ブランド</th>
+                                <th class = "coordinate_show_font">カラー</th>
+                                <th class = "coordinate_show_font">サイズ</th>
+                                <th class = "coordinate_show_font">カテゴリー</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><%= attachment_image_tag item, :item_image, :fill, 200, 200, format: 'jpeg' %></th>
+                                <td class = "coordinate_show_font3"><%= item.item_name %></td>
+                                <td class = "coordinate_show_font3"><%= item.brand %></td>
+                                <td class = "coordinate_show_font3"><%= item.color %></td>
+                                <td class = "coordinate_show_font3"><%= item.size %></td>
+                                <td class = "coordinate_show_font3"><%= item.category_name %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <% end %>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+</div>
 </div>

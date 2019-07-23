@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -50,9 +52,9 @@
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
           <li><%= link_to "コーディネート一覧", coordinates_path %></li>
-          <li class="active"><%= link_to "ユーザー一覧", users_path %></li>
+          <li><%= link_to "ユーザー一覧", users_path %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-          <li class="active"><%= link_to "マイページ", mypage_path(current_user.id) %></li>
+          <li><%= link_to "マイページ", mypage_path(current_user.id) %></li>
         </ul>
         <% elsif admin_signed_in? %>
         <ul class="nav navbar-nav">
