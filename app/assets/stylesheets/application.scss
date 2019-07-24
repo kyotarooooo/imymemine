@@ -374,7 +374,7 @@ textarea{
 .room{
 	background-image: url("img17.jpg");
 	background-size: 100% 100%;
-	height: 10%;
+	height: 100%;
 	padding: 20px 0 100px 0;
 }
 
@@ -388,5 +388,140 @@ textarea{
 }
 
 .room4{
+	color: #fff;
+}
+
+
+//////////////////アドミン共通//////////////////////////////////////////////////////////////////////////////////////////
+.font2{
+	color: #000;
+}
+
+
+
+
+//////////////////アドミンログイン////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.admin_login{
+	background-image: url("img18.jpg");
+	background-size: 100% 100%;
+	height: 1000px;
+	padding: 20px 0 100px 0;
+}
+
+.admin_login2{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	margin: 50px;
+}
+
+
+//////////////////アドミントップページ////////////////////////////////////////////////////////////////////////////////////////////
+
+.admin_top{
+	background-image: url("img19.jpg");
+	background-size: 100% 100%;
+	height: 1000px;
+	padding: 20px 0 100px 0;
+}
+
+.admin_top2{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	margin: 50px;
+}
+
+.admin_top3{
+	padding: 20px 0;
+}
+
+/////////////////アドミンユーザー一覧///////////////////////////////////////////////////////////////////////////////////
+.admin_user_index{
+	background-image: url("img20.jpg");
+	background-size: 100% 100%;
+	height: 100%;
+	padding: 20px 0 100px 0;
+}
+
+.admin_user_index2{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	margin: 50px;
+}
+
+
+/////////////////アドミンユーザー詳細/////////////////////////////////////////////////////////////////////////////////
+.admin_user_show{
+	background-image: url("img21.jpg");
+	background-size: 100% 100%;
+	height: 100%;
+	padding: 50px 0 100px 0;
+}
+
+.admin_user_show2{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.admin_user_show3{
+	margin-bottom: 50px;
+}
+
+.admin_user_show4{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+/////////////////アドミンコーディネート一覧///////////////////////////////////////////////////////////////////////////////
+
+.admin_coordinate_index{
+	background-image: url("img22.jpg");
+	background-size: 100% 100%;
+	height: 100%;
+	padding: 50px 0 100px 0;
+}
+.admin_coordinate_index2{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+////////////////アドミンコーディネート詳細///////////////////////////////////////////////////////////////////////////////
+.admin_coordinate_show{
+	background-image: url("img23.jpg");
+	background-size: 100% 100%;
+	height: 100%;
+	padding: 50px 0 100px 0;
+}
+
+.admin_coordinate_show5{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.admin_coordinate_show7{
+	background-color: #fff;
+	padding: 30px 10px;
+	text-align: left;
+}
+
+.admin_coordinate_show3{
+	background-color: rgba( 0, 0, 0, 0.5);
+	padding: 50px 30px 50px 30px;
+	margin-top: 50px;
+}
+
+.admin_coordinate_show_font{
 	color: #fff;
 }

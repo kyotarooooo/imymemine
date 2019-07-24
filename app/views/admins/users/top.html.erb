@@ -1,4 +1,13 @@
-<h1>管理者マイページ</h1>
-
-<%= link_to "ユーザー一覧", admins_users_path %>
-<%= link_to "コーディネート一覧", admins_coordinates_path %>
+<div class="row admin_top">
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10 admin_top2">
+  	<h1 class = "font">管理者マイページ</h1>
+  	<div class = "admin_top3">
+		<%= link_to "ユーザー一覧", admins_users_path %>
+	</div>
+	<div class = "admin_top3">
+		<%= link_to "コーディネート一覧", admins_coordinates_path %>
+	</div>
+  </div>
+  <div class="col-xs-1"></div>
+</div>
