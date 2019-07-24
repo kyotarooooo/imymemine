@@ -1,6 +1,6 @@
 <div class = "nested-fields well well-compact">
 	<div class = "field">
-    <%= f.attachment_field :item_image %>
+    <p class = "font"><%= f.attachment_field :item_image %></p>
   </div>
 
   <div class = "field">
@@ -26,6 +26,6 @@
   <div class = "field">
     <%= f.label :カラー %><br />
         <%= f.select :color, [["トップス", "トップス"], ["ジャケット/アウター", "ジャケット/アウター"], ["パンツ", "パンツ"], ["スカート", "スカート"], ["オールインワン/サロペット", "オールインワン/サロペット"], ["ワンピーズ", "ワンピーズ"], ["スーツ/ネクタイ", "スーツ/ネクタイ"], ["バッグ", "バッグ"], ["シューズ", "シューズ"], ["アクセサリー", "アクセサリー"], ["レッグウェア", "レッグウェア"], ["帽子", "帽子"], ["アンダーウェア", "アンダーウェア"], ["時計", "時計"], ["その他", "その他"]] ,class:"form-control" %>
-  </div>
+  </div class = "field">
   <%= link_to_remove_association "remove item", f %>
 </div>

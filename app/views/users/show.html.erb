@@ -8,14 +8,16 @@
         <p class = "font">ユーザー名 : <%= @user.user_name %></p>
         <p class = "font">性別 : <%= @user.sex %></p>
         <p class = "font">身長 : <%= @user.height %></p>
-    	<%= @user.introduction %>
+    	<p class = "font"><%= @user.introduction %></p>
 
         <!-- ここからチャット画面へ遷移 -->
         <% if @user.id == current_user.id %>
         <!-- 何も表示させない -->
         <% else %>
             <% if @isRoom == true %>
-                <%= link_to "チャットへ", room_path(@roomId) %>
+                <%= link_to room_path(@roomId) do %>
+                    <font color = "#fff">～メッセージを送る～</font>
+                <% end %>
             <% else %>
                 <%= form_for @room do |f| %>
                     <%= fields_for @entry do |e| %>
@@ -54,7 +56,9 @@
         <div class = "user_show4">
         <!-- いいね機能 -->
         <% @user.liked_coordinates.each do |coordinate| %>
-            <%= attachment_image_tag coordinate, :coordinate_image, :fill, 300, 350, format: 'jpeg' %>
+            <%= link_to coordinate_path(coordinate) do %>
+                <%= attachment_image_tag coordinate, :coordinate_image, :fill, 300, 350, format: 'jpeg' %>
+            <% end %>
         <% end %>
         </div>
     </div>

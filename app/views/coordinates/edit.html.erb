@@ -1,27 +1,33 @@
-<h1>コーディネート編集</h1>
+<div class="row coordinate_edit">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-10 coordinate_edit2">
+		<h1 class = "font">コーディネート編集</h1>
 
-<% if @coordinate.errors.any? %>
-	<div id = "error_explanation" class = "alert alert-danger" >
-		<ul>
-			<% @coordinate.errors.full_messages.each do |message| %>
-				<%= message %>
-			<% end %>
-		</ul>
-	</div>
-<% end %>
+		<% if @coordinate.errors.any? %>
+			<div id = "error_explanation" class = "alert alert-danger" >
+				<ul>
+					<% @coordinate.errors.full_messages.each do |message| %>
+						<%= message %>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
 
-<%= form_for(@coordinate) do |f| %>
-	<div class = "field">
-		<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 300, 300, format: 'jpeg' %>
-		<%= f.attachment_field :coordinate_image %>
-	</div>
+		<%= form_for(@coordinate) do |f| %>
+			<div class = "field">
+				<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 300, 300, format: 'jpeg' %>
+				<%= f.attachment_field :coordinate_image %>
+			</div>
 
-	<div class = "field">
-		<%= f.label :本文 %>
-		<%= f.text_area :body, :size=>"92", autofocus: true, autocomplete: "body" %>
-	</div>
+			<div class = "field">
+				<%= f.label :本文 %>
+				<%= f.text_area :body, :size=>"100x10", autofocus: true, autocomplete: "body" %>
+			</div>
 
-	<div class = "field">
-		<%= f.submit "投稿する" %>
+			<div class = "field">
+				<%= f.submit "投稿する" %>
+			</div>
+		<% end %>
 	</div>
-<% end %>
+	<div class="col-xs-1"></div>
+</div>
