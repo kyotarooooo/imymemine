@@ -12,18 +12,22 @@
   </head>
 
   <body>
+    <div class="wrap">
     <header>
       <% if user_signed_in? %>
-        <div class="page-header">
-          <h1><%= link_to "m.m.m.", root_path %>
-            <small class="navbar-right search">ようこそ <%= current_user.user_name %> さん。</small>
-          </h1>
-            <!-- 検索フォーム -->
-            <%= form_tag(coordinates_search_path,:method => 'get') do %>
-              <%= text_field_tag :search,  "",class:"serch-form", placeholder: "コーディネート検索" %>
-              <%= submit_tag '検索', :name => nil%>
-            <% end %>
+        <%= link_to root_path do %>
+          <p class = "header1">m.m.m.</p>
+        <% end %>
+        <p class = "header2">ようこそ　<%= current_user.user_name %>　さん。</p>
+        <!-- 検索フォーム -->
+        <%= form_tag(coordinates_search_path,:method => 'get') do %>
+        <div class = "header3">
+          <%= text_field_tag :search,  "",class:"search-form", placeholder: "コーディネート検索" %>
+          <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
+            <i class="fas fa-search"></i>　検索</i>
+          <% end %>
         </div>
+        <% end %>
       <% elsif admin_signed_in? %>
         <div class="page-header">
           <h1><%= link_to "m.m.m.", root_path %>
@@ -31,13 +35,20 @@
           </h1>
         </div>
       <% else %>
-        <div class="page-header">
-          <h1><%= link_to "m.m.m.", root_path %>
-            <small>ようこそ ゲスト さん。</small>
-          </h1>
+        <%= link_to new_user_registration_path do %>
+          <h1 class = "header1">m.m.m.</h1>
+        <% end %>
+        <p class = "header2">ようこそ　ゲスト　さん。</p>
+        <!-- 検索フォーム -->
+        <%= form_tag(coordinates_search_path,:method => 'get') do %>
+        <div class = "header3">
+          <%= text_field_tag :search,  "",class:"search-form", placeholder: "コーディネート検索" %>
+          <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
+            <i class="fas fa-search"></i>　検索</i>
+          <% end %>
         </div>
+        <% end %>
       <% end %>
-
 
 
 
@@ -47,7 +58,7 @@
     </div>
     <%= yield %>
     <!-- 後にページが下がっても一緒に動いてくる仕組みにしたい -->
-    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
       <div class="collapse navbar-collapse" id="navbarEexample9">
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
@@ -70,5 +81,6 @@
         <% end %>
       </div>
     </nav>
+    </div><!-- /.wrap -->
   </body>
 </html>

@@ -3,7 +3,10 @@
     <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-            <h1 class = "coordinate_show_font">ユーザーコーディネート詳細</h1>
+            <h1 class = "coordinate_show_font">コーディネート詳細</h1>
+            <div class = "coordinate_show8">
+                <p class = "coordinate_show_font4">投稿日　: <%= @coordinate.created_at.strftime("%Y-%m-%d") %></p>
+            </div>
         </div>
         <div class="col-xs-1"></div>
     </div>
@@ -32,9 +35,17 @@
                 <%= attachment_image_tag @coordinate, :coordinate_image, :fill, 700, 750, format: 'jpeg' %>
                 <!-- いいね機能 -->
                 <% if current_user.already_liked?(@coordinate) %>
-                    <%= button_to "いいねを取り消す", coordinate_like_path(@coordinate), method: :delete %>
+                    <li>
+                    <%= link_to coordinate_like_path(@coordinate), method: :delete do %>
+                      <i class="fas fa-heart" style="color: red;"></i>
+                    <% end %>
+                    </li>
                 <% else %>
-                    <%= button_to "いいね!", coordinate_likes_path(@coordinate) %>
+                    <li>
+                    <%= link_to coordinate_likes_path(@coordinate), method: :post do %>
+                      <i class="far fa-heart" style="color: red;"></i>
+                    <% end %>
+                    </li>
                 <% end %>
                 <p><%= @coordinate.likes.count %>人が「いいね!」しました。</p>
 

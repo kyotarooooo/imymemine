@@ -12,6 +12,10 @@
 	<p class = "font">メールアドレス:　<%= @user.email %></p>
 	<p class = "font">性別:　<%= @user.sex %></p>
 	<p class = "font">身長:　<%= @user.height %></p>
+  <p class = "font"><%= @user.introduction %></p>
+  <%= link_to edit_admins_user_path(@user) do %>
+    <font color = "#fff">編集</font>
+  <% end %>
   </div>
   <div class="col-xs-1"></div>
 </div>
