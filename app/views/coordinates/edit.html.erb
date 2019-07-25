@@ -13,6 +13,7 @@
 			</div>
 		<% end %>
 
+		<!-- コーディネート -->
 		<%= form_for(@coordinate) do |f| %>
 			<div class = "field">
 				<%= attachment_image_tag @coordinate, :coordinate_image, :fill, 300, 300, format: 'jpeg' %>
@@ -24,9 +25,19 @@
 				<%= f.text_area :body, :size=>"100x10", autofocus: true, autocomplete: "body" %>
 			</div>
 
+		<!-- アイテム -->
+		<h3 class = "font">アイテム編集</h3>
+		<div id = "items">
+			<%= f.fields_for :items do |item_fields| %>
+				<%= render 'item_fields', f: item_fields %>
+			<% end %>
+			<div id = "links">
+				<%= link_to_add_association 'add item',f, :items %>
+			</div>
 			<div class = "field">
 				<%= f.submit "投稿する" %>
 			</div>
+		</div>
 		<% end %>
 	</div>
 	<div class="col-xs-1"></div>

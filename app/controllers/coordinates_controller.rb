@@ -1,6 +1,7 @@
 class CoordinatesController < ApplicationController
 
   before_action :user_login_check, only: [:new, :create, :edit, :update, :show]
+  before_action :correct_coordinate, only: [:edit, :update]
   PER = 20
 
 
@@ -34,12 +35,13 @@ class CoordinatesController < ApplicationController
 
   def edit
   	@coordinate = Coordinate.find(params[:id])
+    @item = @coordinate.items.build
   end
 
   def update
   	@coordinate = Coordinate.find(params[:id])
   	@coordinate.user_id = current_user.id
-  	if @coordinate.update(coordinate_params)
+  	if @coordinate.update(update_coordinate_params)
        flash[:notice] = "編集しました。"
   	   redirect_to coordinate_path(@coordinate.id)
     else
@@ -67,9 +69,21 @@ class CoordinatesController < ApplicationController
     @coordinates = Coordinate.search(params[:search]).page(params[:page]).per(PER)
   end
 
+
+  def correct_coordinate
+    coordinate = Coordinate.find(params[:id])
+    if coordinate.user_id != current_user
+      redirect_to coordinates_path
+    end
+  end
+
   private
   def coordinate_params
-  	params.require(:coordinate).permit(:coordinate_image, :body, items_attributes: [:item_image, :item_name, :size, :brand, :color, :category_name, :_destroy])
+  	params.require(:coordinate).permit(:coordinate_image, :body, items_attributes: [:coordinate_id, :item_image, :item_name, :size, :brand, :color, :category_name])
+  end
+
+  def update_coordinate_params
+    params.require(:coordinate).permit(:coordinate_image, :body, items_attributes: [:item_image, :item_name, :size, :brand, :color, :category_name, :_destroy, :id])
   end
 end
 

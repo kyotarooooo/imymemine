@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :authenticate_user!
+  before_action :correct_user, only: [:edit, :update]
   PER = 15
 
 
@@ -50,6 +51,13 @@ class UsersController < ApplicationController
   	   redirect_to mypage_path(@user.id)
     else
        render 'users/edit'
+    end
+  end
+
+  def correct_user
+    user = User.find(params[:id])
+    if user != current_user
+       redirect_to users_path
     end
   end
 
