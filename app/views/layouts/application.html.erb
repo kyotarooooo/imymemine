@@ -62,10 +62,26 @@
       <div class="collapse navbar-collapse" id="navbarEexample9">
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
-          <li><%= link_to "コーディネート一覧", coordinates_path %></li>
-          <li><%= link_to "ユーザー一覧", users_path %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "マイページ", mypage_path(current_user.id) %></li>
+          <li>
+            <%= link_to coordinates_path do %>
+              <i class="fas fa-tshirt">コーディネート一覧</i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to users_path do %>
+              <i class="fas fa-users">ユーザー一覧</i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fas fa-sign-out-alt">ログアウト</i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to mypage_path(current_user.id) do %>
+              <i class="fas fa-user-circle">マイページ</i>
+            <% end %>
+          </li>
         </ul>
         <% elsif admin_signed_in? %>
         <ul class="nav navbar-nav">
@@ -74,9 +90,21 @@
         </ul>
         <% else %>
         <ul class="nav navbar-nav">
-          <li><%= link_to "コーディネート一覧", coordinates_path %></li>
-          <li><%= link_to "新規登録", new_user_registration_path %></li>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li>
+            <%= link_to coordinates_path do %>
+              <i class="fas fa-tshirt">コーディネート一覧</i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to new_user_registration_path do %>
+              <i class="fas fa-user-plus">新規登録</i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to new_user_session_path do %>
+              <i class="fas fa-sign-in-alt">ログイン</i>
+            <% end %>
+          </li>
         </ul>
         <% end %>
       </div>

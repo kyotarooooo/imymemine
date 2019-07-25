@@ -47,7 +47,7 @@
                     <% end %>
                     </li>
                 <% end %>
-                <p><%= @coordinate.likes.count %>人が「いいね!」しました。</p>
+                <p class = "coordinate_show_font5"><%= @coordinate.likes.count %>　人が「いいね！」しました。</p>
 
                 <div class = "coordinate_show7">
                 <p class = "coordinate_show_font"><%= @coordinate.body %></p>
@@ -56,8 +56,12 @@
 
 
                 <% if @coordinate.user_id == current_user.id %>
-                    <%= link_to "編集", edit_coordinate_path(@coordinate.id) %>
-                    <%= link_to "削除", coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" %>
+                    <%= link_to edit_coordinate_path(@coordinate.id) do %>
+                        <p class = "font">～<i class="fas fa-link"></i>編集～</p>
+                    <% end %>
+                    <%= link_to coordinate_path, method: :delete, "data-confirm" => "この投稿を削除しますか？" do %>
+                        <p class = "font">～<i class="fas fa-link"></i>削除～</p>
+                    <% end %>
                 <% end %>
             </div>
             <div class="col-xs-1"></div>

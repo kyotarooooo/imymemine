@@ -2,7 +2,7 @@
 <div class="row field">
     <div class="col-xs-1"></div>
     <div class="col-xs-3 coordinate_index2">
-    	<p class = "font">性別で探す</p>
+    	<p class = "coordinate_index_font">性別で探す</p>
 		<%= link_to mens_path do %>
 			<button type="button" class="btn btn-default btn-lg active"><i class="fas fa-male"></i></i> 　MEN　</button>
 		<% end %>
@@ -13,7 +13,7 @@
     </div>
     <div class="col-xs-1"></div>
     <div class="col-xs-6 coordinate_index3">
-    	<p class = "font">ランキング</p>
+    	<p class = "font"><i class="fas fa-heart" style="color: red;"></i>　ランキング</p>
 			<% @all_ranks.each.with_index(1) do |coordinate, i| %>
 				<font class  = "rank" color="#fff"><%= "第#{i}位" %></font>
 				<%= link_to coordinate_path(coordinate.id) do %>
@@ -27,14 +27,14 @@
 <div class="row field">
     <div class="col-xs-1"></div>
     <div class="col-xs-10">
-	    <div class = "coordinate_index3">
-	    <h3 class = "font">コーディネート一覧</h3>
+	    <div class = "coordinate_index4">
+	    <h3 class = "coordinate_index_font">コーディネート一覧</h3>
 	   	<% @coordinates.each do |coordinate| %>
 			<%= link_to coordinate_path(coordinate.id) do %>
 				<%= attachment_image_tag coordinate, :coordinate_image, :fill, 300, 350, format: 'jpeg' %>
 			<% end %>
 		<% end %>
-		<div class = "coordinate_index4">
+		<div class = "coordinate_index5">
 			<%= paginate @coordinates %>
 		</div>
 		</div>

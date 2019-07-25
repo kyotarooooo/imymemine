@@ -2,10 +2,10 @@
 	<div class="col-xs-1"></div>
 	<div class="col-xs-10 room2">
 		<h1 class = "font">ダイレクトメッセージ</h1>
-		<h3 class = "font">～参加者～</h3>
+		<h3 class = "room_font">...<i class="fas fa-user-friends">...</i></h3>
 		<% @entries.each do |e| %>
 			<%= link_to user_path(e.user) do %>
-				<p class = "font"><%= e.user.user_name %></p>
+				<p class = "font"><i class="far fa-user"></i>　<%= e.user.user_name %></p>
 			<% end %>
 		<% end %>
 
@@ -34,7 +34,7 @@
 			<br>
 			<div class = "field">
 				<%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
-          		<i class="fas fa-reply">　返信</i>
+          		<i class="fas fa-reply">　送信</i>
         		<% end %>
 			</div>
 		<% end %>

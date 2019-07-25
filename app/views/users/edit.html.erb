@@ -24,7 +24,7 @@
         <%= form_for(@user) do |f| %>
           <div class = "field">
             <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
-            <%= f.attachment_field :profile_image %>
+            <font color = "#fff"><%= f.attachment_field :profile_image %></font>
           </div>
       </div>
       <div class="col-xs-1"></div>
