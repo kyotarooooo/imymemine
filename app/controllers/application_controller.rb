@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if resource_or_scope.is_a?(Admin)
        admins_admin_mypage_path
     else
-       root_path
+       coordinates_path
     end
   end
 
@@ -35,8 +35,8 @@ class ApplicationController < ActionController::Base
   def resignation_user?
     if user_signed_in?
       if current_user.resignation == true
-        flash[:danger] = "新規登録してください。"
         sign_out(current_user)
+        redirect_to new_user_session_path
       end
     end
   end

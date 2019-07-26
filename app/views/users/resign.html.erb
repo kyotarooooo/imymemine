@@ -1,6 +1,19 @@
-<h1>退会確認画面</h1>
+<div class="row resign">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-10 resign2">
+		<h1 class = "font">退会確認画面</h1>
+		<p class = "resign_font">退会すると...</p>
+		<p class = "font">コーディネートの一覧のみ閲覧可能となります。</p>
+		<p class = "font">投稿や編集ができなくなります。</p>
+		<p class = "font">再度、投稿するときは新規に会員登録をお願いいたします。</p>
+		<p class = "font">退会しますか？</p>
 
-<p>本当に退会しますか？</p>
-
-<%= link_to "はい", resign_confirm_path(@user), method: :patch %>
-<%= link_to "いいえ", mypage_path(current_user) %>
+		<%= link_to resign_confirm_path(@user), method: :patch do %>
+            <p class = "font">～<i class="fas fa-link"></i>はい～</p>
+        <% end %>
+        <%= link_to mypage_path(current_user) do %>
+            <p class = "font">～<i class="fas fa-link"></i>いいえ～</p>
+        <% end %>
+	</div>
+	<div class="col-xs-1"></div>
+</div>

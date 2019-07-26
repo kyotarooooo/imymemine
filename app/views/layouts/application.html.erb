@@ -70,6 +70,11 @@
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
           <li>
+            <%= link_to root_path do %>
+              <i class="fas fa-book">概要</i>
+            <% end %>
+          </li>
+          <li>
             <%= link_to coordinates_path do %>
               <i class="fas fa-tshirt">コーディネート一覧</i>
             <% end %>
@@ -97,6 +102,11 @@
         </ul>
         <% else %>
         <ul class="nav navbar-nav">
+          <li>
+            <%= link_to root_path do %>
+              <i class="fas fa-book">概要</i>
+            <% end %>
+          </li>
           <li>
             <%= link_to coordinates_path do %>
               <i class="fas fa-tshirt">コーディネート一覧</i>
