@@ -20,6 +20,8 @@ devise_for :users, controllers: {
   	registrations: 'users/registrations'
 }
   resources :users, only:[:index, :show, :edit, :update]
+  get "users/:id/resign" => "users#resign", as: "resign"
+  patch "users/:id/resign_confirm" => "users#resign_confirm", as: "resign_confirm"
 	resources :coordinates, only:[:index, :new, :show, :edit, :update, :destroy] do
     resources :likes, only: [:create, :destroy]
   end

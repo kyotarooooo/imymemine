@@ -54,7 +54,14 @@
 
     </header>
     <div class = "flash">
-      <%= flash[:notice] %>
+      <% if flash[:notice] || flash[:danger] %>
+        <div class="notice">
+          <font color = "#fff"><%= flash[:notice] %></font>
+        </div>
+        <div class="danger">
+         <font color = "#ff0000"> <%= flash[:danger] %></font>
+        </div>
+      <% end %>
     </div>
     <%= yield %>
     <!-- 後にページが下がっても一緒に動いてくる仕組みにしたい -->

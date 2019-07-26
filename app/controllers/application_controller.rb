@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  before_action :resignation_user?
+
 
   def after_sign_in_path_for(resource_or_scope)
     if resource_or_scope.is_a?(Admin)
@@ -27,6 +29,15 @@ class ApplicationController < ActionController::Base
   def admin_login_check
     unless admin_signed_in?
       redirect_to new_admin_session_path
+    end
+  end
+
+  def resignation_user?
+    if user_signed_in?
+      if current_user.resignation == true
+        flash[:danger] = "新規登録してください。"
+        sign_out(current_user)
+      end
     end
   end
 
