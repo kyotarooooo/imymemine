@@ -17,6 +17,8 @@
  @import "bootstrap";
 
 
+
+
 ////////////////////共通//////////////////////////////////////////////////////////////////////////////////////////////////
 .wrap {
 	overflow: hidden;
@@ -71,7 +73,7 @@ textarea::placeholder{
  ////////////////////ユーザー新規登録・ログイン//////////////////////////////////////////////////////////////////////////////////////////////////
 .user_login{
 	text-align: center;
-	background-image: url("img1.jpg");
+	background-image: url(/images/img1.jpg);
 	background-size: 100% 100%;
 	height: 1000px;
 	padding-top: 100px;
@@ -93,7 +95,7 @@ textarea::placeholder{
 
 .user_signup{
 	text-align: center;
-	background-image: url("img2.jpg");
+	background-image: url(/images/img2.jpg);
 	background-size: 100% 100%;
 	height: 1200px;
 	padding-top: 100px;
@@ -116,7 +118,7 @@ em{
 ////////////////////アバウトページ//////////////////////////////////////////////////////////////////////////////////////////////////
 .about1{
 	text-align: left;
-	background-image: url("img24.jpg");
+	background-image: url(/images/img24.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 100px 0 100px 0;
@@ -153,7 +155,7 @@ em{
 
 
 .coordinate_index{
-	background-image: url("img9.jpg");
+	background-image: url(/images/img9.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding-top: 30px;
@@ -216,7 +218,7 @@ text{
 ////////////////////コーディネートインデックス(男・女・サーチ)ページ//////////////////////////////////////////////////////////////////////////////////////////
 .index1{
 	text-align: center;
-	background-image: url("img10.jpg");
+	background-image: url(/images/img10.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding-top: 30px;
@@ -228,7 +230,7 @@ text{
 }
 
 .search1{
-	background-image: url("img5.jpg");
+	background-image: url(/images/img5.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding-top: 30px;
@@ -248,7 +250,7 @@ text{
 ////////////////////コーディネート詳細ページ//////////////////////////////////////////////////////////////////////////////////////////////////
 
 .coordinate_show{
-	background-image: url("img15.jpg");
+	background-image: url(/images/img15.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding-top: 30px;
@@ -322,7 +324,7 @@ text{
 
 ////////////////////コーディネート新規投稿ページ///////////////////////////////////////////////////////////////////////////////////////////////
 .coordinate_new{
-	background-image: url("img7.jpg");
+	background-image: url(/images/img7.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding-top: 30px;
@@ -348,7 +350,7 @@ textarea{
 
 ////////////////////コーディネート編集ページ/////////////////////////////////////////////////////////////////////////////////////
 .coordinate_edit{
-	background-image: url("img16.jpg");
+	background-image: url(/images/img16.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding-top: 30px;
@@ -370,7 +372,7 @@ textarea{
 
 ////////////////////ユーザー一覧ページ//////////////////////////////////////////////////////////////////////////////////////////////////
 .user_index{
-	background-image: url("img6.jpg");
+	background-image: url(/images/img6.jpg);
 	background-size: 100% 100%;
 	height: 1600px;
 	padding-top: 100px;
@@ -380,7 +382,7 @@ textarea{
 ////////////////////ユーザー詳細ページ/////////////////////////////////////////////////////////////////////////////////////////
 
 .user_show{
-	background-image: url("img11.jpg");
+	background-image: url(/images/img11.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 100px 0 100px 0;
@@ -417,7 +419,7 @@ textarea{
 
 ///////////////////ユーザー編集ページ//////////////////////////////////////////////////////////////////////////////////////////////////
 .user_edit{
-	background-image: url("img12.jpg");
+	background-image: url(/images/img12.jpg);
 	background-size: 100% 100%;
 	height: 1400px;
 	padding-top: 20px;
@@ -433,7 +435,7 @@ textarea{
 //////////////////マイページ//////////////////////////////////////////////////////////////////////////////////////////////////
 
 .mypage{
-	background-image: url("img13.jpg");
+	background-image: url(/images/img13.jpg);
 	background-size: 100% 100%;
 	height: 10%;
 	padding: 20px 0 100px 0;
@@ -461,7 +463,7 @@ textarea{
 //////////////////退会画面/////////////////////////////////////////////////////////////////////////////////////////////////
 
 .resign{
-	background-image: url("img3.jpg");
+	background-image: url(/images/img3.jpg);
 	background-size: 100% 100%;
 	height: 1000px;
 	padding: 50px 0 100px 0;
@@ -485,7 +487,7 @@ textarea{
 
 //////////////////チャットルーム////////////////////////////////////////////////////////////////////////////////////////////
 .room{
-	background-image: url("img17.jpg");
+	background-image: url(/images/img17.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 20px 0 100px 0;
@@ -528,7 +530,7 @@ textarea{
 
 
 .admin_login{
-	background-image: url("img18.jpg");
+	background-image: url(/images/img18.jpg);
 	background-size: 100% 100%;
 	height: 1000px;
 	padding: 20px 0 100px 0;
@@ -545,7 +547,7 @@ textarea{
 //////////////////アドミントップページ////////////////////////////////////////////////////////////////////////////////////////////
 
 .admin_top{
-	background-image: url("img19.jpg");
+	background-image: url(/images/img19.jpg);
 	background-size: 100% 100%;
 	height: 1000px;
 	padding: 20px 0 100px 0;
@@ -564,7 +566,7 @@ textarea{
 
 /////////////////アドミンユーザー一覧///////////////////////////////////////////////////////////////////////////////////
 .admin_user_index{
-	background-image: url("img20.jpg");
+	background-image: url(img20.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 20px 0 100px 0;
@@ -579,7 +581,7 @@ textarea{
 
 /////////////////アドミンユーザー詳細/////////////////////////////////////////////////////////////////////////////////
 .admin_user_show{
-	background-image: url("img21.jpg");
+	background-image: url(/images/img21.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 50px 0 100px 0;
@@ -610,7 +612,7 @@ textarea{
 /////////////////アドミンコーディネート一覧///////////////////////////////////////////////////////////////////////////////
 
 .admin_coordinate_index{
-	background-image: url("img22.jpg");
+	background-image: url(/images/img22.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 50px 0 100px 0;
@@ -625,7 +627,7 @@ textarea{
 
 ////////////////アドミンコーディネート詳細///////////////////////////////////////////////////////////////////////////////
 .admin_coordinate_show{
-	background-image: url("img23.jpg");
+	background-image: url(/images/img23.jpg);
 	background-size: 100% 100%;
 	height: 100%;
 	padding: 50px 0 100px 0;
@@ -657,7 +659,7 @@ textarea{
 
 ///////////////////アドミンユーザー編集ページ//////////////////////////////////////////////////////////////////////////////////////////////////
 .admin_user_edit{
-	background-image: url("img25.jpg");
+	background-image: url(/images/img25.jpg);
 	background-size: 100% 100%;
 	height: 1400px;
 	padding-top: 20px;
