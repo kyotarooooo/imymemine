@@ -72,7 +72,7 @@ class CoordinatesController < ApplicationController
 
   def correct_coordinate
     coordinate = Coordinate.find(params[:id])
-    if coordinate.user_id != current_user
+    if coordinate.user_id != current_user.id
       redirect_to coordinates_path
     end
   end
