@@ -3,19 +3,20 @@
       <div class="col-xs-1"></div>
       <div class="col-xs-10 user_edit2">
         <h1 class = "font">ユーザー情報の編集</h1>
+        <% if @user.errors.any? %>
+          <div id = "error_explanation" class = "alert alert-danger">
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
       </div>
       <div class="col-xs-1"></div>
   </div>
 
-  <% if @user.errors.any? %>
-    <div id = "error_explanation" class = "alert alert-danger">
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+
 
 
   <div class="row">
@@ -69,7 +70,9 @@
       <%= f.select :height, [["~150cm", "~150cm"], ["150~155cm", "150~155cm"], ["155~160cm", "155~160cm"], ["165~170cm", "165~170cm"], ["170~175cm", "170~175cm"], ["175~180cm", "175~180cm"], ["180~185cm", "180~185cm"], ["185~190cm", "185~190cm"], ["190cm~", "190cm~"]] ,class:"form-control" %>
     </div>
     <div class = "field">
-      <%= f.submit "更新" %>
+      <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
+        更新
+      <% end %>
     </div>
   <% end %>
       </div>

@@ -4,7 +4,9 @@
 			<h1 class = "font">"<%= params[:search] %>"の検索結果</h1>
 			<div class = "search2">
 			<% @coordinates.each do |coordinate| %>
+				<%= link_to coordinate_path(coordinate) do %>
 				<%= attachment_image_tag coordinate, :coordinate_image, :fill, 300, 350, format: 'jpeg' %>
+				<% end %>
 			<% end %>
 			<div class = "search3">
 				<%= paginate @coordinates %>

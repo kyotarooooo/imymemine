@@ -52,7 +52,7 @@ class CoordinatesController < ApplicationController
   def destroy
   	@coordinate = Coordinate.find(params[:id])
   	@coordinate.destroy
-  	redirect_to coordinates_path
+  	redirect_to mypage_path(current_user.id)
   end
 
   def mens_coordinate

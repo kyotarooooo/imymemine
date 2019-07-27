@@ -13,6 +13,7 @@ class User < ApplicationRecord
   validates :kanji_name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
   validates :kana_name, format: { with: /\A[ァ-ヶー－]+\z/ }
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+  validates :user_name, presence: true
 
   #いいね機能
   has_many :coordinates, dependent: :destroy

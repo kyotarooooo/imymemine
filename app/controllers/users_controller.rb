@@ -46,6 +46,7 @@ class UsersController < ApplicationController
 
   def update
   	@user = User.find(params[:id])
+    @user.id == current_user.id
   	if @user.update(user_params)
        flash[:notice] = "編集しました"
   	   redirect_to mypage_path(@user.id)

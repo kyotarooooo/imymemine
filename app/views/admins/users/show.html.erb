@@ -26,7 +26,7 @@
   <div class="col-xs-10 admin_user_show4">
   	<h1 class = "admin_user_show_font">コーディネート一覧</h1>
   	<% @coordinates.each do |coordinate| %>
-		<%= link_to coordinate_path(coordinate.id) do %>
+		<%= link_to admins_coordinate_path(coordinate.id) do %>
 			<%= attachment_image_tag coordinate, :coordinate_image, :fill, 200, 250, format: 'jpeg' %>
 		<% end %>
 	<% end %>
