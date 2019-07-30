@@ -1,8 +1,8 @@
-<div class = "user_edit">
-  <div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10 user_edit2">
-        <h1 class = "font">ユーザー情報の編集</h1>
+
+<div class="user_edit">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10 user_edit2">
+      <h1 class = "font">ユーザー情報の編集</h1>
         <% if @user.errors.any? %>
           <div id = "error_explanation" class = "alert alert-danger">
             <ul>
@@ -12,70 +12,52 @@
             </ul>
           </div>
         <% end %>
-      </div>
-      <div class="col-xs-1"></div>
-  </div>
 
-
-
-
-  <div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10 user_edit2">
         <%= form_for(@user) do |f| %>
           <div class = "field">
             <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg", size:'350x350', class: 'img-circle profile-thumb my-img edit-img' %>
             <font color = "#fff"><%= f.attachment_field :profile_image %></font>
           </div>
-      </div>
-      <div class="col-xs-1"></div>
+
+          <div class = "field">
+            <%= f.text_area :introduction, :size=>"100", autofocus: true, autocomplete: "body" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :氏名（漢字） %><br />
+            <%= f.text_field :kanji_name, autofocus: true, autocomplete: "kanji_name" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :氏名（カナ） %><br />
+            <%= f.text_field :kana_name, autofocus: true, autocomplete: "kana_name" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :ユーザー名 %><br />
+            <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :メールアドレス %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :性別 %><br />
+            <%= f.select :sex, [["男性", "男性"], ["女性", "女性"]] ,class:"form-control" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :身長 %><br />
+            <%= f.select :height, [["~150cm", "~150cm"], ["150~155cm", "150~155cm"], ["155~160cm", "155~160cm"], ["165~170cm", "165~170cm"], ["170~175cm", "170~175cm"], ["175~180cm", "175~180cm"], ["180~185cm", "180~185cm"], ["185~190cm", "185~190cm"], ["190cm~", "190cm~"]] ,class:"form-control" %>
+          </div>
+          <div class = "field">
+            <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
+              更新
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+    <div class="col-xs-1"></div>
   </div>
-
-
-  <div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10 user_edit2">
-
-        <div class = "field">
-      <%= f.text_area :introduction, :size=>"100", autofocus: true, autocomplete: "body" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :氏名（漢字） %><br />
-      <%= f.text_field :kanji_name, autofocus: true, autocomplete: "kanji_name" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :氏名（カナ） %><br />
-      <%= f.text_field :kana_name, autofocus: true, autocomplete: "kana_name" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :ユーザー名 %><br />
-      <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :メールアドレス %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-
-    <div class="field">
-        <%= f.label :性別 %><br />
-        <%= f.select :sex, [["男性", "男性"], ["女性", "女性"]] ,class:"form-control" %>
-      </div>
-
-      <div class="field">
-      <%= f.label :身長 %><br />
-      <%= f.select :height, [["~150cm", "~150cm"], ["150~155cm", "150~155cm"], ["155~160cm", "155~160cm"], ["165~170cm", "165~170cm"], ["170~175cm", "170~175cm"], ["175~180cm", "175~180cm"], ["180~185cm", "180~185cm"], ["185~190cm", "185~190cm"], ["190cm~", "190cm~"]] ,class:"form-control" %>
-    </div>
-    <div class = "field">
-      <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
-        更新
-      <% end %>
-    </div>
-  <% end %>
-      </div>
-      <div class="col-xs-1"></div>
-  </div>
-</div>

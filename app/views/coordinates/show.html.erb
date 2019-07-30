@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-10 coordinate_show5">
-                <%= attachment_image_tag @coordinate, :coordinate_image, :fill, 700, 750, format: 'jpeg' %>
+                <%= attachment_image_tag @coordinate, :coordinate_image, :fill, 800, 850, format: 'jpeg' %>
                 <!-- いいね機能 -->
                 <% if current_user.already_liked?(@coordinate) %>
                     <li>
